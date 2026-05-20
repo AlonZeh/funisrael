@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "השכרת מתנפחים פרימיום",
   description:
     "FUN-ISRAEL — מתנפחים יוקרתיים לאירועי ילדים. השכרה ל-12 שעות, איסוף עצמי, ניקיון ובטיחות ברמה הגבוהה ביותר.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fun-israel.co.il",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fun-israel.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "972509331313",
   phone: process.env.NEXT_PUBLIC_PHONE_NUMBER ?? "050-933-1313",
   pickupAddress: process.env.NEXT_PUBLIC_PICKUP_ADDRESS ?? "דרך יבנה 52",

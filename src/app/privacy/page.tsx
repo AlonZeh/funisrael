@@ -319,7 +319,7 @@ export default function PrivacyPage() {
                       </div>
                     </a>
                     <a
-                      href="mailto:privacy@fun-israel.co.il"
+                      href="mailto:privacy@fun-israel.com"
                       className="flex items-center gap-3 rounded-2xl bg-cream-50 ring-1 ring-ink-100 p-4 hover:bg-cream-100"
                     >
                       <span className="grid h-10 w-10 place-items-center rounded-2xl bg-white text-brand-600 shadow-soft">
@@ -328,7 +328,7 @@ export default function PrivacyPage() {
                       <div>
                         <p className="text-xs text-ink-500">דוא״ל פרטיות</p>
                         <p className="font-display font-bold text-ink-800 ltr">
-                          privacy@fun-israel.co.il
+                          privacy@fun-israel.com
                         </p>
                       </div>
                     </a>

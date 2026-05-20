@@ -505,7 +505,7 @@ A comprehensive Hebrew privacy policy aligned with the Israeli **חוק הגנת
 - "עודכן לאחרונה" card with the policy date.
 - Auto-generated table of contents with anchor links.
 - 13 sectioned cards, each with a lucide icon: כללי · איזה מידע אנחנו אוספים · למה אנחנו משתמשים במידע · דיוור ישיר ושיווק · שיתוף מידע עם צדדים שלישיים · אופן ומשך שמירת המידע · עוגיות ואחסון מקומי · זכויות המשתמש · אבטחת מידע · אין סליקה ואין שמירת אמצעי תשלום · שימוש על ידי קטינים · שינויים במדיניות · יצירת קשר בנושאי פרטיות.
-- Embedded contact card (phone + `privacy@fun-israel.co.il`) inside section 13.
+- Embedded contact card (phone + `privacy@fun-israel.com`) inside section 13.
 - Closing dark-card with "רוצים שנמחק את הפרטים?" + cross-links to terms + accessibility.
 - `BreadcrumbList` JSON-LD.
 

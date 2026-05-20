@@ -155,11 +155,11 @@ export function AccessibilityStatementContent() {
               {siteConfig.phone}
             </a>
             <a
-              href="mailto:hello@fun-israel.co.il"
+              href="mailto:hello@fun-israel.com"
               className="btn-ghost w-full"
             >
               <Mail className="h-4 w-4" />
-              hello@fun-israel.co.il
+              hello@fun-israel.com
             </a>
             <p className="text-xs text-ink-400">{t.a11y.contactForA11y}</p>
           </aside>
