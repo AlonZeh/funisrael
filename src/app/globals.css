@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-cream-50 text-ink-700 font-sans antialiased;
+    font-feature-settings: "ss01", "ss02", "kern";
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-ink-800;
+  }
+
+  /* RTL helpers */
+  [dir="rtl"] .lucide {
+    transform: scaleX(1);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply container max-w-[1320px];
+  }
+
+  .heading-display {
+    @apply font-display font-extrabold tracking-tight text-ink-800;
+  }
+
+  .heading-1 {
+    @apply heading-display text-4xl md:text-5xl lg:text-6xl leading-[1.05];
+  }
+  .heading-2 {
+    @apply heading-display text-3xl md:text-4xl lg:text-5xl leading-[1.1];
+  }
+  .heading-3 {
+    @apply heading-display text-2xl md:text-3xl leading-[1.15];
+  }
+
+  .body-lead {
+    @apply text-base md:text-lg text-ink-500 leading-relaxed;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-medium text-ink-600 shadow-soft ring-1 ring-ink-100;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98];
+  }
+  .btn-primary {
+    @apply btn bg-ink-800 text-white hover:bg-ink-700 shadow-soft hover:shadow-card px-5 py-2.5 text-sm md:text-base;
+  }
+  .btn-brand {
+    @apply btn bg-brand-500 text-white hover:bg-brand-600 shadow-glow px-5 py-3 text-sm md:text-base;
+  }
+  .btn-ghost {
+    @apply btn bg-white text-ink-800 hover:bg-cream-100 ring-1 ring-ink-100 px-5 py-2.5 text-sm md:text-base;
+  }
+  .btn-whatsapp {
+    @apply btn bg-whatsapp text-white hover:bg-whatsapp-dark shadow-card px-5 py-3 text-sm md:text-base;
+  }
+
+  .card-surface {
+    @apply rounded-3xl bg-white shadow-soft ring-1 ring-ink-100/80;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-hover hover:-translate-y-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold tracking-wide;
+  }
+  .badge-popular {
+    @apply badge bg-brand-100 text-brand-700;
+  }
+  .badge-premium {
+    @apply badge bg-ink-800 text-cream-50;
+  }
+  .badge-summer {
+    @apply badge bg-sky-100 text-sky-700;
+  }
+  .badge-indoor {
+    @apply badge bg-mint-100 text-mint-700;
+  }
+  .badge-instagram {
+    @apply badge bg-gradient-to-r from-brand-400 via-brand-500 to-sun-400 text-white;
+  }
+  .badge-new {
+    @apply badge bg-sun-200 text-sun-800;
+  }
+  .badge-toddler {
+    @apply badge bg-cream-200 text-ink-700;
+  }
+
+  .input {
+    @apply w-full rounded-2xl bg-white border border-ink-100 px-4 py-3 text-ink-800 placeholder:text-ink-300 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-ink-600 mb-1.5;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .grid-bg {
+    background-image: var(--tw-bg-grid, none);
+    background-size: 32px 32px;
+  }
+}
+
+/* Accessibility toolbar effects (driven by .a11y-* classes on <html>) */
+html.a11y-contrast {
+  filter: contrast(1.35);
+}
+html.a11y-contrast body {
+  background: #ffffff;
+  color: #000000;
+}
+html.a11y-contrast a,
+html.a11y-contrast button {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+html.a11y-grayscale {
+  filter: grayscale(1);
+}
+html.a11y-contrast.a11y-grayscale {
+  filter: contrast(1.35) grayscale(1);
+}
+html.a11y-underline-links a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+html.a11y-no-motion *,
+html.a11y-no-motion *::before,
+html.a11y-no-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-delay: 0ms !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Better visible focus everywhere */
+:focus-visible {
+  outline: 2px solid #FF5E33;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
