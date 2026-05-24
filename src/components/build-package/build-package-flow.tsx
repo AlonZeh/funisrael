@@ -16,6 +16,7 @@ import { siteConfig } from "@/lib/site";
 import { buildWhatsAppLink } from "@/lib/utils";
 import type { Product } from "@/lib/types";
 import { PageHeader } from "@/components/layout/page-header";
+import { TermsReminder } from "@/components/terms/terms-reminder";
 
 type EventType =
   | "birthday"
@@ -398,7 +399,16 @@ export function BuildPackageFlow() {
                         onClick={() => toggleAddon(a.id)}
                         className="text-start w-full flex gap-3"
                       >
-                        <span className="text-2xl shrink-0">{a.icon}</span>
+                        {a.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={a.image}
+                            alt={a.name.he}
+                            className="h-16 w-16 rounded-2xl object-cover shrink-0"
+                          />
+                        ) : (
+                          <span className="text-2xl shrink-0">{a.icon}</span>
+                        )}
                         <div className="flex-1">
                           <p className="font-display font-extrabold text-ink-800">
                             {a.name.he}
@@ -624,6 +634,7 @@ export function BuildPackageFlow() {
               <li>• רוצים אפקט WOW — בובות ענק ורקע במבי.</li>
             </ul>
           </div>
+          <TermsReminder variant="card" />
           <Link
             href="/packages"
             className="block text-center text-sm text-ink-500 hover:text-brand-600"

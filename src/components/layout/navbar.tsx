@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, Puzzle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Logo } from "@/components/brand/logo";
 import { LanguageSwitcher } from "./language-switcher";
@@ -23,7 +23,6 @@ export function Navbar() {
     { label: t.nav.catalog, href: "/catalog" },
     { label: t.nav.packages, href: "/packages" },
     { label: t.nav.water, href: "/categories/water" },
-    { label: t.nav.toddler, href: "/categories/toddler" },
     { label: t.nav.blog, href: "/blog" },
     { label: t.nav.faq, href: "/faq" },
     { label: t.nav.terms, href: "/terms" },
@@ -92,10 +91,11 @@ export function Navbar() {
           <LanguageSwitcher compact />
           <CartNavIcon />
           <Link
-            href={localizePath("/cart", locale)}
-            className="hidden xl:inline-flex btn-brand"
+            href={localizePath("/build-package", locale)}
+            className="hidden md:inline-flex btn-brand"
           >
-            {t.cta.bookNow}
+            <Puzzle className="h-4 w-4" />
+            {t.nav.buildPackage}
           </Link>
           <button
             type="button"
@@ -129,18 +129,28 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <div className="grid grid-cols-2 gap-2 pt-3">
-                <a href={`tel:${siteConfig.phone}`} className="btn-ghost">
-                  <Phone className="h-4 w-4" />
-                  {t.cta.callUs}
-                </a>
+              <div className="grid gap-2 pt-3">
                 <Link
-                  href={localizePath("/cart", locale)}
+                  href={localizePath("/build-package", locale)}
                   className="btn-brand"
                   onClick={() => setOpen(false)}
                 >
-                  עגלת שיריון
+                  <Puzzle className="h-4 w-4" />
+                  {t.nav.buildPackage}
                 </Link>
+                <div className="grid grid-cols-2 gap-2">
+                  <a href={`tel:${siteConfig.phone}`} className="btn-ghost">
+                    <Phone className="h-4 w-4" />
+                    {t.cta.callUs}
+                  </a>
+                  <Link
+                    href={localizePath("/cart", locale)}
+                    className="btn-ghost"
+                    onClick={() => setOpen(false)}
+                  >
+                    עגלת שיריון
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>

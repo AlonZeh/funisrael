@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Send, ShoppingBag } from "lucide-react";
 import { useReservationStore } from "@/store/reservation-store";
 import { buildReservationWhatsAppLink } from "@/lib/reservation/whatsapp";
 import { PageHeader } from "@/components/layout/page-header";
+import { TermsReminder } from "@/components/terms/terms-reminder";
 import { ReservationStepper, type StepDef } from "./reservation-stepper";
 import { ReceivingMethodStep } from "./step-receiving-method";
 import { DateSelectionStep } from "./step-date";
@@ -212,6 +213,10 @@ export function ReservationFlow() {
         title="בקשת שיריון — בלי לחץ, בלי תשלום באתר"
         description="ארבעה שלבים קצרים: איסוף או הובלה, תאריך, מוצרים נלווים, ושליחה ל-FUN-ISRAEL. נחזור אליכם בוואטסאפ לאישור זמינות."
       />
+
+      <section className="container-page pb-4">
+        <TermsReminder variant="card" />
+      </section>
 
       <section className="container-page pb-6">
         <ReservationStepper

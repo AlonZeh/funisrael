@@ -6,6 +6,7 @@ export const dictionaries = {
       home: "דף הבית",
       catalog: "מתנפחים",
       packages: "החבילות שלנו",
+      buildPackage: "בנו חבילה",
       water: "מתנפחי מים",
       toddler: "לפעוטות",
       indoor: "אינדור",
@@ -22,6 +23,7 @@ export const dictionaries = {
     },
     cta: {
       bookNow: "הזמינו עכשיו",
+      buildPackage: "בנו חבילה אישית",
       whatsapp: "WhatsApp",
       callUs: "התקשרו",
       checkAvailability: "בדיקת זמינות",
@@ -105,6 +107,7 @@ export const dictionaries = {
       home: "Home",
       catalog: "Inflatables",
       packages: "Our Packages",
+      buildPackage: "Build a Package",
       water: "Water Inflatables",
       toddler: "Toddlers",
       indoor: "Indoor",
@@ -121,6 +124,7 @@ export const dictionaries = {
     },
     cta: {
       bookNow: "Book now",
+      buildPackage: "Build a custom package",
       whatsapp: "WhatsApp",
       callUs: "Call us",
       checkAvailability: "Check availability",
@@ -208,6 +212,7 @@ export const dictionaries = {
       home: "Главная",
       catalog: "Батуты",
       packages: "Наши пакеты",
+      buildPackage: "Свой пакет",
       water: "Водные батуты",
       toddler: "Малыши",
       indoor: "Для дома",
@@ -224,6 +229,7 @@ export const dictionaries = {
     },
     cta: {
       bookNow: "Заказать",
+      buildPackage: "Собрать свой пакет",
       whatsapp: "WhatsApp",
       callUs: "Позвонить",
       checkAvailability: "Проверить доступность",

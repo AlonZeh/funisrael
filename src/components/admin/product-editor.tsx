@@ -435,6 +435,20 @@ export function ProductEditor({ initial, mode }: Props) {
             placeholder="ימי הולדת בקיץ&#10;אירועי משפחה&#10;פעילויות גן"
           />
         </Field>
+
+        <Field
+          label="כתובת וידאו (אופציונלי)"
+          hint="YouTube / Vimeo / MP4 URL"
+        >
+          <input
+            value={draft.videoUrl ?? ""}
+            onChange={(e) =>
+              update("videoUrl", e.target.value || undefined)
+            }
+            className="input ltr"
+            placeholder="https://youtube.com/..."
+          />
+        </Field>
       </Section>
 
       <div className="flex justify-end gap-2">

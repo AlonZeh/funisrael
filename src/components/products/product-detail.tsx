@@ -22,6 +22,7 @@ import { siteConfig } from "@/lib/site";
 import { getCategory } from "@/lib/categories";
 import { ProductSchema } from "@/components/seo/schema";
 import { AddToReservationButton } from "@/components/reservation/add-to-reservation-button";
+import { TermsReminder } from "@/components/terms/terms-reminder";
 
 interface Props {
   initialProduct: Product;
@@ -148,6 +149,8 @@ export function ProductDetail({ initialProduct }: Props) {
                 שאלות בוואטסאפ
               </a>
             </div>
+
+            <TermsReminder variant="card" />
 
             {product.perfectFor.length > 0 && (
               <div className="card-surface p-5">

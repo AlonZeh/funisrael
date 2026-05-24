@@ -42,6 +42,8 @@ export interface PackageAddon {
   compatibleCategories: PackageCategoryId[];
   isActive: boolean;
   icon?: string; // emoji or lucide icon name
+  /** Optional image URL — falls back to the emoji icon if absent. */
+  image?: string;
 }
 
 export interface RentalPackage {

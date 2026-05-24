@@ -56,7 +56,23 @@ export function Footer() {
           </InfoItem>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between text-xs text-cream-200/60">
+        <div className="mt-12 rounded-2xl bg-white/5 ring-1 ring-white/10 p-4 text-sm text-cream-100 flex items-start gap-3">
+          <Shield className="h-4 w-4 text-brand-300 mt-0.5 shrink-0" />
+          <p className="leading-relaxed">
+            <span className="font-bold text-white">לפני השימוש בכל מתקן —</span>{" "}
+            חובה לעבור על{" "}
+            <Link
+              href="/terms"
+              className="font-semibold text-brand-300 underline underline-offset-2 hover:text-white"
+            >
+              תקנון FUN-ISRAEL במלואו
+            </Link>
+            , כולל נספח הבטיחות, נהלי החירום והצהרת המשגיח האחראי. השימוש מותר
+            בחצר פרטית בלבד ובהשגחת מבוגר אחראי.
+          </p>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between text-xs text-cream-200/60">
           <p>© {new Date().getFullYear()} FUN-ISRAEL. כל הזכויות שמורות.</p>
           <p>אתר זה לא משמש לרכישה — להזמנת מתנפח השאירו פרטים או לחצו על וואטסאפ.</p>
         </div>

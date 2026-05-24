@@ -18,16 +18,30 @@ export function PackageAddonsSection() {
           <p className="body-lead">{t.packagesPage.addonsSubtitle}</p>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((a) => (
             <div
               key={a.id}
-              className="card-surface p-5 flex items-start gap-3"
+              className="card-surface overflow-hidden flex flex-col"
             >
-              <span className="text-2xl shrink-0" aria-hidden>
-                {a.icon ?? "✨"}
-              </span>
-              <div className="flex-1">
+              <div className="relative aspect-[5/3] bg-cream-100">
+                {a.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={a.image}
+                    alt={pickLocalized(a.name, locale)}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                ) : (
+                  <span
+                    className="absolute inset-0 grid place-items-center text-5xl"
+                    aria-hidden
+                  >
+                    {a.icon ?? "✨"}
+                  </span>
+                )}
+              </div>
+              <div className="p-5 flex-1">
                 <div className="flex items-baseline justify-between gap-2">
                   <h3 className="font-display font-bold text-ink-800">
                     {pickLocalized(a.name, locale)}
@@ -36,7 +50,7 @@ export function PackageAddonsSection() {
                     {pickLocalized(a.priceLabel, locale)}
                   </span>
                 </div>
-                <p className="text-sm text-ink-500 mt-1">
+                <p className="text-sm text-ink-500 mt-1.5">
                   {pickLocalized(a.description, locale)}
                 </p>
               </div>

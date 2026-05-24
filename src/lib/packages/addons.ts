@@ -11,6 +11,8 @@ export const packageAddons: PackageAddon[] = [
   {
     id: "popcorn-machine",
     icon: "🍿",
+    image:
+      "https://images.unsplash.com/photo-1505214055343-44ad8f6f3a35?w=1200&q=80",
     name: {
       he: "מכונת פופקורן + שערות סבתא",
       en: "Popcorn machine + cotton candy",
@@ -37,6 +39,8 @@ export const packageAddons: PackageAddon[] = [
   {
     id: "generator",
     icon: "⚡",
+    image:
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80",
     name: {
       he: "גנרטור",
       en: "Generator",
@@ -63,6 +67,8 @@ export const packageAddons: PackageAddon[] = [
   {
     id: "cooler",
     icon: "🧊",
+    image:
+      "https://images.unsplash.com/photo-1530021232320-687d8e3dba54?w=1200&q=80",
     name: {
       he: "צידנית גדולה",
       en: "Large cooler",
@@ -89,6 +95,8 @@ export const packageAddons: PackageAddon[] = [
   {
     id: "mascots-pair",
     icon: "🐻",
+    image:
+      "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=1200&q=80",
     name: {
       he: "בובות ענק לאירוע",
       en: "Giant mascots set",
@@ -113,6 +121,8 @@ export const packageAddons: PackageAddon[] = [
   {
     id: "mascot-single",
     icon: "🎭",
+    image:
+      "https://images.unsplash.com/photo-1542596594-649edbc13630?w=1200&q=80",
     name: {
       he: "בובת ענק / תחפושת",
       en: "Single mascot / costume",
@@ -138,6 +148,8 @@ export const packageAddons: PackageAddon[] = [
   {
     id: "bambi-backdrop",
     icon: "🦌",
+    image:
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80",
     name: {
       he: "רקע קאפה במבי",
       en: "Bambi photo backdrop",

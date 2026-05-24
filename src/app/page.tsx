@@ -12,6 +12,7 @@ import { PackagesSection } from "@/components/packages/packages-section";
 import { LocalSEOBlock } from "@/components/home/local-seo";
 import { BlogTeaser } from "@/components/home/blog-teaser";
 import { CommunityBanner } from "@/components/marketing/community-banner";
+import { ExtrasShowcase } from "@/components/home/extras-showcase";
 
 export const metadata: Metadata = {
   title:
@@ -48,6 +49,7 @@ export default function HomePage() {
       </section>
       <BlogTeaser />
       <HowItWorks />
+      <ExtrasShowcase />
       <Testimonials />
       <HomeFaqTeaser />
       <CTABanner />
