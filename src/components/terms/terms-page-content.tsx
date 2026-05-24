@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
+  CheckCircle2,
   ChevronDown,
   Droplet,
   Eye,
