@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { useArticleStore } from "@/store/article-store";
 import { ArticleCard } from "@/components/blog/article-card";
+import { TermsReminder } from "@/components/terms/terms-reminder";
 
 export function BlogTeaser() {
   const articles = useArticleStore((s) => s.articles);
@@ -13,6 +14,8 @@ export function BlogTeaser() {
   return (
     <section className="py-16 md:py-20">
       <div className="container-page">
+        <TermsReminder variant="card" className="mb-8" />
+
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div className="space-y-3 max-w-2xl">
             <span className="text-xs font-bold tracking-widest text-brand-600 uppercase">

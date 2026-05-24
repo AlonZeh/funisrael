@@ -30,6 +30,7 @@ import {
 import { FAQSchema } from "@/components/seo/schema";
 import { cn, formatILS } from "@/lib/utils";
 import { pickLocalized } from "@/lib/i18n/hooks";
+import { TermsReminder } from "@/components/terms/terms-reminder";
 
 export function ArticleView({ initial }: { initial: Article }) {
   const stored = useArticleStore((s) =>
@@ -174,10 +175,13 @@ export function ArticleView({ initial }: { initial: Article }) {
             )}
 
             <FAQBlock items={article.faq} />
+
+            <TermsReminder variant="card" />
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start space-y-4">
             <SidebarCTA article={article} />
+            <TermsReminder variant="inline" className="px-1" />
             <SidebarKeywords article={article} />
           </aside>
         </div>
