@@ -1,190 +1,161 @@
 import type { PackageAddon } from "./types";
 
 /**
- * Add-on catalog.
+ * Event extras catalog.
  *
  * 👉 Edit prices/names here.
- * 👉 Set isActive = false to hide an add-on without deleting it.
- * 👉 compatibleCategories controls which packages may surface this add-on.
+ * 👉 Set isActive = false to hide an extra without deleting it.
+ * 👉 compatibleCategories controls which packages surface this extra.
  */
 export const packageAddons: PackageAddon[] = [
   {
-    id: "ball-pit",
-    icon: "🎈",
+    id: "popcorn-machine",
+    icon: "🍿",
     name: {
-      he: "בריכת כדורים פרימיום",
-      en: "Premium ball pit",
-      ru: "Бассейн с шариками"
+      he: "מכונת פופקורן + שערות סבתא",
+      en: "Popcorn machine + cotton candy",
+      ru: "Попкорн-машина + сахарная вата"
     },
     description: {
-      he: "בריכה עם 1,500 כדורים פסטליים, ניקוי בין השכרות.",
-      en: "1,500 pastel balls, cleaned between rentals.",
-      ru: "1500 пастельных шаров, чистка между арендами."
+      he: "תוספת מתוקה וכיפית שמשדרגת כל יום הולדת ויוצרת תחושת אירוע אמיתי.",
+      en: "A sweet, festive upgrade that turns any birthday into a real event.",
+      ru: "Сладкое и весёлое дополнение, которое превращает праздник в настоящее событие."
     },
-    priceLabel: { he: "+₪150", en: "+₪150", ru: "+₪150" },
+    priceLabel: { he: "+₪250", en: "+₪250", ru: "+₪250" },
     compatibleCategories: [
       "birthday",
       "premium",
-      "toddler",
-      "luxury-white",
-      "indoor",
-      "combo",
-      "extra"
-    ],
-    isActive: true
-  },
-  {
-    id: "play-mat",
-    icon: "🟦",
-    name: { he: "מחצלת פעילות", en: "Play mat", ru: "Игровой коврик" },
-    description: {
-      he: "אזור רך מתחת ומסביב למתנפח.",
-      en: "Soft surface around the inflatable.",
-      ru: "Мягкое покрытие вокруг батута."
-    },
-    priceLabel: { he: "+₪80", en: "+₪80", ru: "+₪80" },
-    compatibleCategories: ["toddler", "indoor", "luxury-white"],
-    isActive: true
-  },
-  {
-    id: "soccer-goal",
-    icon: "⚽",
-    name: {
-      he: "שער כדורגל מתנפח",
-      en: "Inflatable soccer goal",
-      ru: "Надувные футбольные ворота"
-    },
-    description: {
-      he: "פעילות מצוינת לילדים גדולים יותר.",
-      en: "A hit with older kids.",
-      ru: "Отличное развлечение для детей постарше."
-    },
-    priceLabel: { he: "+₪120", en: "+₪120", ru: "+₪120" },
-    compatibleCategories: ["birthday", "combo", "extra", "premium"],
-    isActive: true
-  },
-  {
-    id: "archery",
-    icon: "🎯",
-    name: {
-      he: "עמדת קליעה",
-      en: "Archery target station",
-      ru: "Тир / стрельба из лука"
-    },
-    description: {
-      he: "סטים בטוחים מבד עם חצים בטוחים.",
-      en: "Safe foam-tip archery set.",
-      ru: "Безопасные стрелы с мягким наконечником."
-    },
-    priceLabel: { he: "+₪140", en: "+₪140", ru: "+₪140" },
-    compatibleCategories: ["birthday", "combo", "extra"],
-    isActive: true
-  },
-  {
-    id: "ext-cord",
-    icon: "🔌",
-    name: {
-      he: "מאריך חשמל ארוך",
-      en: "Long extension cord",
-      ru: "Длинный удлинитель"
-    },
-    description: {
-      he: "כבל 25 מטר תקני, בלם בטיחות.",
-      en: "Certified 25 m cable with breaker.",
-      ru: "Сертифицированный кабель 25 м."
-    },
-    priceLabel: { he: "+₪40", en: "+₪40", ru: "+₪40" },
-    compatibleCategories: [
-      "self-pickup",
-      "birthday",
       "water",
-      "indoor",
       "combo",
-      "premium",
       "extra",
+      "sports",
+      "festival",
       "luxury-white"
     ],
     isActive: true
   },
   {
-    id: "extra-blower",
-    icon: "💨",
+    id: "generator",
+    icon: "⚡",
     name: {
-      he: "מפוח נוסף",
-      en: "Extra blower",
-      ru: "Дополнительный вентилятор"
+      he: "גנרטור",
+      en: "Generator",
+      ru: "Генератор"
     },
     description: {
-      he: "למתנפחים גדולים או לעמידות יתר.",
-      en: "Helps large inflatables stay rigid.",
-      ru: "Помогает большим батутам держать форму."
+      he: "פתרון חשמל לאירועים שאין בהם נקודת חשמל נוחה. מומלץ לבדוק איתנו לפי מיקום האירוע.",
+      en: "Power solution for events without a nearby outlet. Check with us based on your venue.",
+      ru: "Решение для мест без розетки. Уточняйте у нас в зависимости от площадки."
     },
-    priceLabel: { he: "+₪100", en: "+₪100", ru: "+₪100" },
-    compatibleCategories: ["combo", "extra", "premium"],
+    priceLabel: { he: "+₪400", en: "+₪400", ru: "+₪400" },
+    compatibleCategories: [
+      "water",
+      "birthday",
+      "premium",
+      "combo",
+      "extra",
+      "sports",
+      "festival",
+      "luxury-white"
+    ],
     isActive: true
   },
   {
-    id: "decor-balloons-soon",
-    icon: "🎀",
+    id: "cooler",
+    icon: "🧊",
     name: {
-      he: "אביזרי עיצוב (בקרוב)",
-      en: "Styling kit (coming soon)",
-      ru: "Декор (скоро)"
+      he: "צידנית גדולה",
+      en: "Large cooler",
+      ru: "Большой кулер"
     },
     description: {
-      he: "סט קישוטים תואם למתנפח. נשמח לעדכן ברגע שהקולקציה משיקה.",
-      en: "Decor kit matching the inflatable. We'll notify when it launches.",
-      ru: "Набор декора в стиле батута. Сообщим при запуске."
+      he: "צידנית גדולה לאירועי חוץ, מים וימי הולדת בגינה.",
+      en: "A large cooler for outdoor events, water parties and garden birthdays.",
+      ru: "Большой кулер для уличных мероприятий и водных праздников."
     },
-    priceLabel: { he: "בקרוב", en: "Coming soon", ru: "Скоро" },
-    compatibleCategories: ["luxury-white", "premium", "birthday"],
-    isActive: false
-  },
-  {
-    id: "soft-play",
-    icon: "🌈",
-    name: { he: "סט סופט-פליי", en: "Soft-play set", ru: "Софт-плей" },
-    description: {
-      he: "רכיבי משחק רכים פסטליים, מומלץ לפעוטות.",
-      en: "Pastel soft-play modules, perfect for toddlers.",
-      ru: "Мягкие модули пастельных цветов для малышей."
-    },
-    priceLabel: { he: "+₪220", en: "+₪220", ru: "+₪220" },
-    compatibleCategories: ["toddler", "indoor", "luxury-white"],
+    priceLabel: { he: "+₪200", en: "+₪200", ru: "+₪200" },
+    compatibleCategories: [
+      "water",
+      "birthday",
+      "combo",
+      "extra",
+      "sports",
+      "festival",
+      "premium",
+      "luxury-white"
+    ],
     isActive: true
   },
   {
-    id: "water-slide-mini",
-    icon: "🌊",
+    id: "mascots-pair",
+    icon: "🐻",
     name: {
-      he: "מגלשת מים מיני",
-      en: "Mini water slide",
-      ru: "Мини водная горка"
+      he: "בובות ענק לאירוע",
+      en: "Giant mascots set",
+      ru: "Гигантские маскоты"
     },
     description: {
-      he: "תוספת קלה לאירוע קיץ.",
-      en: "An easy summer upgrade.",
-      ru: "Простое летнее дополнение."
+      he: "זוג דובי ענק בגובה 3.2 מטר + בובת בייבי בוס בגובה 3 מטר. WOW לתמונות וקבלת פנים.",
+      en: "Pair of 3.2 m teddy bears + a 3 m Baby Boss mascot. WOW for photos and welcomes.",
+      ru: "Пара 3,2 м медведей + 3 м Бэйби Босс. WOW для фото и встречи гостей."
     },
-    priceLabel: { he: "+₪180", en: "+₪180", ru: "+₪180" },
-    compatibleCategories: ["water", "combo", "extra"],
+    priceLabel: { he: "+₪300", en: "+₪300", ru: "+₪300" },
+    compatibleCategories: [
+      "birthday",
+      "premium",
+      "combo",
+      "extra",
+      "festival",
+      "luxury-white"
+    ],
     isActive: true
   },
   {
-    id: "yard-games",
-    icon: "🎲",
+    id: "mascot-single",
+    icon: "🎭",
     name: {
-      he: "משחקי חצר",
-      en: "Yard games bundle",
-      ru: "Дворовые игры"
+      he: "בובת ענק / תחפושת",
+      en: "Single mascot / costume",
+      ru: "Один маскот / костюм"
     },
     description: {
-      he: "כדורת, באולינג, קלאס וכדומה.",
-      en: "Bocce, mini bowling, hopscotch, and more.",
-      ru: "Боче, боулинг, классики и др."
+      he: "בובת ענק להפתעה, קבלת פנים, צילום עם הילדים ושדרוג האווירה.",
+      en: "A single giant mascot for surprises, welcomes, and photo moments.",
+      ru: "Один большой маскот для встречи гостей и фото."
     },
-    priceLabel: { he: "+₪100", en: "+₪100", ru: "+₪100" },
-    compatibleCategories: ["birthday", "combo", "extra", "custom"],
+    priceLabel: { he: "+₪200", en: "+₪200", ru: "+₪200" },
+    compatibleCategories: [
+      "birthday",
+      "premium",
+      "combo",
+      "extra",
+      "sports",
+      "festival",
+      "luxury-white"
+    ],
+    isActive: true
+  },
+  {
+    id: "bambi-backdrop",
+    icon: "🦌",
+    name: {
+      he: "רקע קאפה במבי",
+      en: "Bambi photo backdrop",
+      ru: "Фотофон Бэмби"
+    },
+    description: {
+      he: "רקע צילום מעוצב בגודל 1.8×1 מטר עם במבי חיתוך צורני — מושלם לעיצובי בלונים וצילומים.",
+      en: "A 1.8×1 m styled photo backdrop with a die-cut Bambi — perfect for balloon styling and photos.",
+      ru: "Стилизованный фотофон 1,8×1 м с фигурным Бэмби — для шарового декора и фото."
+    },
+    priceLabel: { he: "+₪280", en: "+₪280", ru: "+₪280" },
+    compatibleCategories: [
+      "birthday",
+      "premium",
+      "luxury-white",
+      "extra",
+      "festival"
+    ],
     isActive: true
   }
 ];

@@ -1,29 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, MessageCircle, PackageCheck, Truck } from "lucide-react";
+import { Calendar, MessageCircle, PackageCheck, Puzzle } from "lucide-react";
 import { SectionHeader } from "./category-grid";
 
 const steps = [
   {
+    icon: <PackageCheck className="h-6 w-6" />,
+    title: "בוחרים מתקן או חבילה",
+    description:
+      "גולשים בקטלוג או בחבילות המומלצות, ומסמנים את מה שמתאים לאירוע."
+  },
+  {
+    icon: <Puzzle className="h-6 w-6" />,
+    title: "מוסיפים שדרוגים",
+    description:
+      "פופקורן, בובות ענק, גנרטור, צידנית, רקע לצילומים — מה שהופך את האירוע לחוויה."
+  },
+  {
     icon: <Calendar className="h-6 w-6" />,
-    title: "בוחרים מתנפח ותאריך",
-    description: "גולשים בקטלוג, בודקים זמינות ומסמנים את התאריך באתר."
+    title: "בוחרים תאריך רצוי",
+    description:
+      "מסמנים תאריך מועדף לבדיקת זמינות. בלי תשלום באתר, בלי התחייבות."
   },
   {
     icon: <MessageCircle className="h-6 w-6" />,
-    title: "מאשרים בוואטסאפ",
-    description: "מקבלים אישור אישי, התשלום מתבצע במעמד האיסוף — פשוט ונקי."
-  },
-  {
-    icon: <Truck className="h-6 w-6" />,
-    title: "איסוף בזריזות",
-    description: "מגיעים לדרך יבנה 52, נטענים תוך 10 דקות ויוצאים לכיוון האירוע."
-  },
-  {
-    icon: <PackageCheck className="h-6 w-6" />,
-    title: "12 שעות של כיף",
-    description: "מחזירים למחרת — אנחנו דואגים לניקיון, חיטוי ולתחזוקה."
+    title: "שולחים לוואטסאפ",
+    description:
+      "אנחנו מאשרים זמינות, סוגרים פרטים אחרונים ומתאמים תיאום בוואטסאפ."
   }
 ];
 

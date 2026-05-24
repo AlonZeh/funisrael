@@ -13,454 +13,469 @@ import type { RentalPackage } from "./types";
  */
 export const packages: RentalPackage[] = [
   {
-    id: "self-pickup",
-    slug: "self-pickup",
+    id: "mini-party",
+    slug: "mini-party",
     sortOrder: 10,
     isActive: true,
-    isFeatured: false,
-    isPopular: false,
-    category: "self-pickup",
-    tags: ["best-value"],
+    isFeatured: true,
+    isPopular: true,
+    category: "birthday",
+    tags: ["best-value", "popular"],
     title: {
-      he: "חבילת איסוף עצמי",
-      en: "Self-Pickup Package",
-      ru: "Пакет самовывоза"
+      he: "חבילת Mini Party",
+      en: "Mini Party Package",
+      ru: "Пакет Mini Party"
     },
     subtitle: {
-      he: "אירוע קטן בבית, חצר או גינה",
-      en: "Small event at home, yard or garden",
-      ru: "Маленький праздник дома или во дворе"
+      he: "יום הולדת קטן, צבעוני וקליל",
+      en: "A small, colorful, easy birthday",
+      ru: "Маленький, яркий и лёгкий день рождения"
     },
     description: {
-      he: "החבילה הכי משתלמת — מתנפח קומפקטי אחד, איסוף עצמי, וכל מה שצריך כדי שהאירוע יהיה מושלם.",
-      en: "Our most affordable option — one compact inflatable, self-pickup, and everything you need to host a great event.",
-      ru: "Самый доступный вариант — один компактный батут, самовывоз и всё, что нужно для праздника."
+      he: "החבילה הקלאסית לימי הולדת קטנים: מתנפח אחד לבחירה (הבית הקופצני או מתנפח פעילות עם מגלשה), הוראות התקנה והכל מוכן לאירוע קליל בגינה.",
+      en: "The classic small birthday bundle: choose one inflatable (Bouncy House or Activity Slide Bouncer), full setup instructions, ready for an easy garden event.",
+      ru: "Классический набор для маленького дня рождения: один батут на выбор, инструкция по установке и всё готово для лёгкого праздника во дворе."
     },
     bestFor: {
-      he: "אירוע קטן בבית / חצר / גינה",
-      en: "Small event at home, yard or garden",
-      ru: "Небольшое мероприятие дома или во дворе"
+      he: "ילדים צעירים, חצרות קטנות, עד 10 ילדים",
+      en: "Young kids, small yards, up to 10 children",
+      ru: "Маленькие дети, небольшие дворы, до 10 детей"
     },
     includes: {
       he: [
-        "מתנפח קומפקטי אחד",
-        "השכרה ל-12 שעות",
-        "איסוף עצמי מדרך יבנה 52",
-        "הוראות הפעלה ובטיחות"
+        "מתנפח לבחירה: הבית הקופצני או מתנפח פעילות עם מגלשה",
+        "הוראות הפעלה ובטיחות",
+        "התאמת המתנפח לגיל הילדים"
       ],
       en: [
-        "One compact inflatable",
-        "12-hour rental",
-        "Self-pickup from Derech Yavne 52",
-        "Setup and safety instructions"
+        "Choice of inflatable: Bouncy House or Activity Slide Bouncer",
+        "Operating and safety instructions",
+        "Inflatable matched to the kids' ages"
       ],
       ru: [
-        "Один компактный батут",
-        "Аренда 12 часов",
-        "Самовывоз с Дерех Явне 52",
-        "Инструкции по установке и безопасности"
+        "Батут на выбор: Прыгучий дом или Игровой батут с горкой",
+        "Инструкции по эксплуатации и безопасности",
+        "Подбор батута под возраст детей"
       ]
     },
-    optionalAddons: ["ext-cord", "yard-games"],
+    optionalAddons: ["popcorn-machine", "mascot-single", "bambi-backdrop"],
     childMood: {
       he: "לקופצים הקטנים",
       en: "For little bouncers",
       ru: "Для маленьких прыгунов"
     },
-    priceFrom: 500,
-    priceLabel: { he: "החל מ-₪500", en: "From ₪500", ru: "От ₪500" },
-    recommendedAges: "3-10",
+    priceFrom: 449,
+    priceLabel: {
+      he: "₪449-₪499 לאירוע",
+      en: "₪449-₪499 per event",
+      ru: "₪449-₪499 за мероприятие"
+    },
+    recommendedAges: "2-8",
     durationHours: 12,
-    pickupOnly: true,
+    pickupOnly: false,
     setupNotes: {
-      he: "התקנה ביתית פשוטה תוך 10-15 דק׳, על משטח דשא או בטון חלק.",
-      en: "Simple home setup in 10-15 min on grass or smooth concrete.",
-      ru: "Простая установка дома за 10-15 минут на газоне или ровном бетоне."
+      he: "הקמה ביתית פשוטה, מתאים לדשא או רצפה חלקה.",
+      en: "Simple home setup on grass or smooth flooring.",
+      ru: "Простая установка дома на газоне или ровном полу."
     },
     safetyNotes: {
-      he: "חובה השגחת מבוגר. עיגון יתדות בכל הפינות.",
-      en: "Adult supervision required. Stake all four corners.",
+      he: "השגחת מבוגר חובה. עיגון יתדות בכל הפינות.",
+      en: "Adult supervision required. Stake all corners.",
       ru: "Обязателен присмотр взрослого. Закрепить все углы."
-    },
-    fits: { home: true, yard: true, water: false, indoor: true, outdoor: true },
-    image:
-      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?w=1400&q=80",
-    colorTheme: "cream",
-    seoTitle: {
-      he: "חבילת איסוף עצמי — השכרת מתנפח באיסוף עצמי",
-      en: "Self-Pickup Inflatable Rental Package",
-      ru: "Пакет самовывоза — аренда батута"
-    },
-    seoDescription: {
-      he: "השכרת מתנפח קומפקטי באיסוף עצמי מ-FUN-ISRAEL. החל מ-₪500, 12 שעות.",
-      en: "Compact inflatable rental with self-pickup from FUN-ISRAEL. From ₪500, 12 hours.",
-      ru: "Аренда компактного батута с самовывозом от FUN-ISRAEL. От ₪500, 12 часов."
-    },
-    whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת איסוף עצמי 🎈\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים:\nמיקום האירוע:\nאשמח לפרטים נוספים.",
-      en: "Hi, I'd like to check availability for the Self-Pickup package 🎈\nPreferred date:\nPickup time:\nKids' ages:\nEvent location:\nThanks!",
-      ru: "Здравствуйте, хочу проверить доступность пакета самовывоза 🎈\nЖелаемая дата:\nВремя самовывоза:\nВозраст детей:\nМесто проведения:\nСпасибо!"
-    }
-  },
-  {
-    id: "birthday-basic",
-    slug: "birthday-basic",
-    sortOrder: 20,
-    isActive: true,
-    isFeatured: true,
-    isPopular: true,
-    category: "birthday",
-    tags: ["popular"],
-    title: {
-      he: "חבילת יום הולדת בסיסית",
-      en: "Basic Birthday Package",
-      ru: "Базовый пакет на день рождения"
-    },
-    subtitle: {
-      he: "ימי הולדת לילדים עד גיל 8",
-      en: "Birthdays for kids up to age 8",
-      ru: "Дни рождения для детей до 8 лет"
-    },
-    description: {
-      he: "החבילה הקלאסית והמשפחתית שלנו — מתנפח לבחירה, אזור ישיבה והכל מוכן ליום הולדת בלי כאבי ראש.",
-      en: "Our classic family package — your choice of inflatable, a sitting area, and everything ready for a stress-free birthday.",
-      ru: "Наш классический семейный пакет — выбор батута, зона для гостей и всё готово к празднику без хлопот."
-    },
-    bestFor: {
-      he: "ימי הולדת לילדים עד גיל 8",
-      en: "Birthdays for kids up to age 8",
-      ru: "Дни рождения для детей до 8 лет"
-    },
-    includes: {
-      he: [
-        "מתנפח אחד לבחירה",
-        "מחצלת / אזור ישיבה בסיסי",
-        "הוראות התקנה",
-        "השכרה ל-12 שעות"
-      ],
-      en: [
-        "One inflatable of your choice",
-        "Play mat / basic seating area",
-        "Setup instructions",
-        "12-hour rental"
-      ],
-      ru: [
-        "Один батут на выбор",
-        "Коврик / базовая зона",
-        "Инструкции по установке",
-        "Аренда 12 часов"
-      ]
-    },
-    optionalAddons: ["ball-pit", "soccer-goal", "yard-games"],
-    childMood: {
-      he: "ליום הולדת קלאסי",
-      en: "For a classic birthday",
-      ru: "Для классического дня рождения"
-    },
-    priceFrom: 790,
-    priceLabel: { he: "החל מ-₪790", en: "From ₪790", ru: "От ₪790" },
-    recommendedAges: "3-8",
-    durationHours: 12,
-    pickupOnly: true,
-    setupNotes: {
-      he: "כל המתנפחים מוכנים לשימוש תוך 15 דק׳.",
-      en: "All inflatables are ready to use within 15 minutes.",
-      ru: "Все батуты готовы к использованию за 15 минут."
-    },
-    safetyNotes: {
-      he: "כללי בטיחות מסופקים בכתב. השגחת מבוגר חובה.",
-      en: "Written safety guidelines provided. Adult supervision required.",
-      ru: "Письменные правила безопасности. Обязателен взрослый."
     },
     fits: { home: true, yard: true, water: false, indoor: true, outdoor: true },
     image:
       "https://images.unsplash.com/photo-1530878869293-44c79c5f04a8?w=1400&q=80",
     colorTheme: "coral",
     seoTitle: {
-      he: "חבילת יום הולדת בסיסית — מתנפחים להשכרה",
-      en: "Basic Birthday Inflatable Package",
-      ru: "Базовый пакет на день рождения с батутом"
+      he: "חבילת Mini Party — מתנפח להשכרה ליום הולדת קטן",
+      en: "Mini Party Package — small birthday inflatable rental",
+      ru: "Пакет Mini Party — батут для маленького дня рождения"
     },
     seoDescription: {
-      he: "חבילת יום הולדת עם מתנפח לבחירה, 12 שעות השכרה. החל מ-₪790.",
-      en: "Birthday package with your choice of inflatable, 12-hour rental. From ₪790.",
-      ru: "Пакет на день рождения с батутом на выбор, аренда 12 часов. От ₪790."
+      he: "חבילת יום הולדת קטנה עם מתנפח לבחירה. ₪449-₪499, בלי תשלום באתר — בדיקת זמינות בוואטסאפ.",
+      en: "Small birthday package with choice of inflatable. ₪449-₪499, no online payment — availability via WhatsApp.",
+      ru: "Маленький пакет дня рождения с выбором батута. ₪449-₪499, без онлайн-оплаты — доступность в WhatsApp."
     },
     whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת יום הולדת בסיסית 🎂\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים:\nמיקום האירוע:\nאשמח להמלצה למתנפח.",
-      en: "Hi, I'd like to check availability for the Basic Birthday package 🎂\nPreferred date:\nPickup time:\nKids' ages:\nEvent location:\nWould love a recommendation.",
-      ru: "Здравствуйте, хочу проверить доступность базового пакета на день рождения 🎂\nДата:\nВремя самовывоза:\nВозраст детей:\nМесто:\nЖду рекомендации."
+      he: "שלום, אני רוצה לבדוק זמינות לחבילת Mini Party 🎂\nתאריך רצוי:\nגילאי הילדים:\nכמות ילדים משוערת:\nמיקום האירוע:\nתודה!",
+      en: "Hi, I'd like to check availability for the Mini Party package 🎂\nPreferred date:\nKids' ages:\nEstimated kids:\nLocation:\nThanks!",
+      ru: "Здравствуйте, хочу проверить доступность пакета Mini Party 🎂\nДата:\nВозраст детей:\nКол-во:\nМесто:\nСпасибо!"
     }
   },
   {
-    id: "premium",
-    slug: "premium",
-    sortOrder: 30,
-    isActive: true,
-    isFeatured: true,
-    isPopular: false,
-    category: "premium",
-    tags: ["premium", "instagram"],
-    title: {
-      he: "חבילת פרימיום",
-      en: "Premium Package",
-      ru: "Пакет Премиум"
-    },
-    subtitle: {
-      he: "אירוע מושקע עם נראות גבוהה",
-      en: "An elevated event with a styled look",
-      ru: "Эффектный, стильный праздник"
-    },
-    description: {
-      he: "החבילה לאמהות שרוצות 'וואו' מצולם. מתנפח פרימיום, תוספת משחק לפי זמינות, אביזרי עיצוב בסיסיים.",
-      en: "For parents who want the 'wow' moment. Premium inflatable, optional game add-on, styled basics.",
-      ru: "Для родителей, которым важен 'вау'-момент. Премиум-батут, дополнение к игре, базовый стайлинг."
-    },
-    bestFor: {
-      he: "אירוע מושקע עם נראות גבוהה",
-      en: "An elevated event with a styled look",
-      ru: "Стильное, эффектное мероприятие"
-    },
-    includes: {
-      he: [
-        "מתנפח פרימיום לבחירה",
-        "בריכת כדורים / תוספת משחק לפי זמינות",
-        "אביזרי עיצוב בסיסיים",
-        "התאמה לגילאי הילדים"
-      ],
-      en: [
-        "Premium inflatable of your choice",
-        "Ball pit / game add-on (subject to availability)",
-        "Basic styling accessories",
-        "Tailored to your kids' age"
-      ],
-      ru: [
-        "Премиум-батут на выбор",
-        "Бассейн с шариками / дополнение (по доступности)",
-        "Базовые декоративные элементы",
-        "Подбор по возрасту детей"
-      ]
-    },
-    optionalAddons: ["ball-pit", "soft-play", "yard-games"],
-    childMood: {
-      he: "ליום הולדת מצטלם",
-      en: "For an Insta-worthy party",
-      ru: "Для фотогеничного праздника"
-    },
-    priceFrom: 1290,
-    priceLabel: { he: "החל מ-₪1,290", en: "From ₪1,290", ru: "От ₪1,290" },
-    recommendedAges: "3-12",
-    durationHours: 12,
-    pickupOnly: true,
-    setupNotes: {
-      he: "הקמה מקצועית מקסימום 25 דק׳.",
-      en: "Pro-grade setup in up to 25 minutes.",
-      ru: "Профессиональная установка до 25 минут."
-    },
-    safetyNotes: {
-      he: "השגחה צמודה, ניקיון מקיף לפני האירוע.",
-      en: "Close supervision, deep-clean before the event.",
-      ru: "Постоянный присмотр, глубокая уборка перед праздником."
-    },
-    fits: { home: true, yard: true, water: false, indoor: true, outdoor: true },
-    image:
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1400&q=80",
-    colorTheme: "ink",
-    seoTitle: {
-      he: "חבילת פרימיום — מתנפחים יוקרתיים להשכרה",
-      en: "Premium Inflatable Rental Package",
-      ru: "Премиум-пакет аренды батута"
-    },
-    seoDescription: {
-      he: "חבילת פרימיום למתנפחים יוקרתיים, מתאימה לאירועים מצולמים. החל מ-₪1,290.",
-      en: "Premium inflatable rental package for styled events. From ₪1,290.",
-      ru: "Премиум-пакет аренды батутов для стильных праздников. От ₪1,290."
-    },
-    whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת פרימיום ✨\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים:\nמיקום האירוע:\nאשמח להמלצה מותאמת.",
-      en: "Hi, I'd like to check availability for the Premium package ✨\nPreferred date:\nPickup time:\nKids' ages:\nEvent location:\nWould love a tailored recommendation.",
-      ru: "Здравствуйте, хочу проверить доступность Премиум-пакета ✨\nДата:\nВремя:\nВозраст детей:\nМесто:\nБуду рад(а) индивидуальной рекомендации."
-    }
-  },
-  {
-    id: "summer-water",
-    slug: "summer-water",
-    sortOrder: 40,
+    id: "water-splash",
+    slug: "water-splash",
+    sortOrder: 20,
     isActive: true,
     isFeatured: true,
     isPopular: true,
     category: "water",
     tags: ["summer", "popular"],
     title: {
-      he: "חבילת מים לקיץ",
-      en: "Summer Water Package",
-      ru: "Летний водный пакет"
+      he: "חבילת Water Splash",
+      en: "Water Splash Package",
+      ru: "Пакет Water Splash"
     },
     subtitle: {
-      he: "אירועי קיץ, חצרות וגינות",
-      en: "Summer events, yards and gardens",
-      ru: "Летние праздники во дворе и саду"
+      he: "פארק מים פרטי בגינה",
+      en: "Your own water park in the yard",
+      ru: "Личный водный парк во дворе"
     },
     description: {
-      he: "פארק מים בחצר. מתנפח מים, חיבור צינור, בטיחות מים — ויש לכם אטרקציית הקיץ.",
-      en: "A water park in your backyard. Water inflatable, hose connection, water safety — instant summer hit.",
-      ru: "Водный парк во дворе. Водный батут, подключение шланга, безопасность — летний хит готов."
+      he: "חבילת המים הקלאסית — מתנפח מים לבחירה (פארק התמנון הסגול או מגלשת מים כפולה), הכנת חיבור מים והכל מוכן ליום קיץ בגינה.",
+      en: "The classic water bundle — choose a water inflatable (Purple Octopus Park or Double Water Slide), hose-up guide, ready for a summer garden day.",
+      ru: "Классический водный набор — водный батут на выбор, подключение воды и всё готово для летнего дня."
     },
     bestFor: {
-      he: "אירועי קיץ, חצרות וגינות",
-      en: "Summer events, yards and gardens",
-      ru: "Летние мероприятия, дворы и сады"
+      he: "אירועי קיץ, ימי הולדת מים, ילדים שאוהבים מגלשות",
+      en: "Summer events, water birthdays, slide-loving kids",
+      ru: "Летние праздники, водные дни рождения"
     },
     includes: {
       he: [
-        "מתנפח מים / מגלשה רטובה",
-        "חיבור מים לפי הנחיות",
-        "הוראות בטיחות לשימוש במים",
-        "השכרה ל-12 שעות"
+        "מתנפח מים לבחירה: פארק התמנון הסגול או מגלשת מים כפולה",
+        "הנחיות חיבור מים ובטיחות",
+        "התאמה לגודל החצר ולמספר הילדים"
       ],
       en: [
-        "Water inflatable / wet slide",
-        "Hose connection per guidelines",
-        "Water safety instructions",
-        "12-hour rental"
+        "Choice of water inflatable: Purple Octopus Park or Double Water Slide",
+        "Water hookup and safety guidelines",
+        "Matched to yard size and number of kids"
       ],
       ru: [
-        "Водный батут / мокрая горка",
-        "Подключение шланга по правилам",
-        "Инструкция по водной безопасности",
-        "Аренда 12 часов"
+        "Водный батут на выбор: Парк Осьминог или Двойная горка",
+        "Инструкции по подключению воды и безопасности",
+        "Подбор под размер двора и кол-во детей"
       ]
     },
-    optionalAddons: ["ball-pit", "water-slide-mini", "ext-cord"],
+    optionalAddons: ["cooler", "popcorn-machine", "generator"],
     childMood: {
       he: "לחובבי מים",
       en: "For water lovers",
       ru: "Для любителей воды"
     },
-    priceFrom: 1490,
-    priceLabel: { he: "החל מ-₪1,490", en: "From ₪1,490", ru: "От ₪1,490" },
-    recommendedAges: "4-14",
+    priceFrom: 699,
+    priceLabel: {
+      he: "₪699-₪799 לאירוע",
+      en: "₪699-₪799 per event",
+      ru: "₪699-₪799 за мероприятие"
+    },
+    recommendedAges: "3-12",
     durationHours: 12,
-    pickupOnly: true,
+    pickupOnly: false,
     setupNotes: {
-      he: "דורש שטח דשא 6×5 מ׳ ולחץ מים סטנדרטי.",
-      en: "Needs a 6×5 m grass area and standard water pressure.",
-      ru: "Нужна газонная площадка 6×5 м и стандартный напор воды."
+      he: "דורש דשא או משטח חלק 6×5 מ׳ ולחץ מים סטנדרטי.",
+      en: "Needs grass or smooth surface 6×5 m and standard water pressure.",
+      ru: "Газон или ровная площадка 6×5 м, стандартный напор воды."
     },
     safetyNotes: {
-      he: "מומלץ להגביל מספר ילדים בו-זמנית. השגחת מבוגר חובה.",
+      he: "מומלץ להגביל מספר ילדים במתנפח בו-זמנית. השגחת מבוגר חובה.",
       en: "Limit simultaneous users. Adult supervision required.",
-      ru: "Ограничьте число одновременных пользователей. Обязателен взрослый."
+      ru: "Ограничьте одновременных пользователей. Обязателен взрослый."
     },
     fits: { home: false, yard: true, water: true, indoor: false, outdoor: true },
     image:
       "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1400&q=80",
     colorTheme: "sky",
     seoTitle: {
-      he: "חבילת מים לקיץ — מתנפחי מים להשכרה",
-      en: "Summer Water Inflatable Package",
-      ru: "Летний пакет — водные батуты"
+      he: "חבילת Water Splash — מתנפחי מים להשכרה",
+      en: "Water Splash Package — water inflatable rental",
+      ru: "Пакет Water Splash — водные батуты в аренду"
     },
     seoDescription: {
-      he: "מתנפחי מים להשכרה — חבילת קיץ פרימיום, השכרה ל-12 שעות. החל מ-₪1,490.",
-      en: "Water inflatables for rent — premium summer bundle, 12-hour rental. From ₪1,490.",
-      ru: "Водные батуты в аренду — летний пакет, 12 часов. От ₪1,490."
+      he: "מתנפח מים לבחירה לקיץ. ₪699-₪799, בדיקת זמינות בוואטסאפ.",
+      en: "Choice of water inflatable for summer. ₪699-₪799, availability via WhatsApp.",
+      ru: "Водный батут на выбор для лета. ₪699-₪799, доступность в WhatsApp."
     },
     whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת מים לקיץ 💦\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים:\nגודל החצר:\nתודה!",
-      en: "Hi, I'd like to check availability for the Summer Water package 💦\nPreferred date:\nPickup time:\nKids' ages:\nYard size:\nThanks!",
-      ru: "Здравствуйте, хочу проверить доступность Летнего водного пакета 💦\nДата:\nВремя:\nВозраст детей:\nРазмер двора:\nСпасибо!"
+      he: "שלום, אני רוצה לבדוק זמינות לחבילת Water Splash 💦\nתאריך רצוי:\nגיל הילדים:\nכמות ילדים משוערת:\nגודל החצר:\nמיקום:\nתודה!",
+      en: "Hi, I'd like to check availability for the Water Splash package 💦\nPreferred date:\nKids' ages:\nEstimated kids:\nYard size:\nLocation:\nThanks!",
+      ru: "Здравствуйте, хочу проверить доступность Water Splash 💦\nДата:\nВозраст детей:\nКол-во:\nРазмер двора:\nМесто:\nСпасибо!"
     }
   },
   {
-    id: "toddler",
-    slug: "toddler",
-    sortOrder: 50,
+    id: "double-splash",
+    slug: "double-splash",
+    sortOrder: 30,
     isActive: true,
-    isFeatured: false,
-    isPopular: false,
-    category: "toddler",
-    tags: ["toddler-safe"],
+    isFeatured: true,
+    isPopular: true,
+    category: "water",
+    tags: ["summer", "popular", "premium"],
     title: {
-      he: "חבילת פעוטות",
-      en: "Toddler Package",
-      ru: "Пакет для малышей"
+      he: "חבילת Double Splash",
+      en: "Double Splash Package",
+      ru: "Пакет Double Splash"
     },
     subtitle: {
-      he: "גילאי 2-5, חוויה רכה ובטוחה",
-      en: "Ages 2-5, soft and safe experience",
-      ru: "Возраст 2-5, мягкий и безопасный опыт"
+      he: "שני מתקני מים, יותר כיף ופחות תורים",
+      en: "Two water rigs, more fun and shorter lines",
+      ru: "Два водных батута, больше веселья и меньше очередей"
     },
     description: {
-      he: "מתנפח קטן ובטוח, בריכת כדורים או Soft Play לפי זמינות, התאמה מלאה לחללים פנימיים או חיצוניים קטנים.",
-      en: "A small, safe inflatable with a ball pit or soft-play (subject to availability), perfect for small indoor or outdoor spaces.",
-      ru: "Маленький безопасный батут, бассейн с шариками или soft-play, отлично подходит для дома или небольшого двора."
+      he: "שני מתנפחי מים באירוע אחד: מגלשת מים דו-מסלולית + פארק התמנון הסגול. מתאים לאירועים גדולים יותר שבהם רוצים שהילדים יזרמו במקביל ולא ייתקעו בתורים.",
+      en: "Two water inflatables at one event: Twin-Lane Water Slide + Purple Octopus Park. Designed for bigger events where you want flow, not lines.",
+      ru: "Два водных батута на одном празднике: Двухполосная горка + Парк Осьминог. Для больших праздников без очередей."
     },
-    bestFor: { he: "גילאי 2-5", en: "Ages 2-5", ru: "Возраст 2-5" },
+    bestFor: {
+      he: "10-25 ילדים, אירועי קיץ, ימי הולדת גדולים",
+      en: "10-25 kids, summer events, bigger birthdays",
+      ru: "10-25 детей, летние праздники, большие дни рождения"
+    },
     includes: {
       he: [
-        "מתנפח קטן ובטוח",
-        "בריכת כדורים או Soft Play לפי זמינות",
-        "התאמה לחלל פנימי או חיצוני",
-        "השכרה ל-12 שעות"
+        "מגלשת מים דו-מסלולית",
+        "פארק מים התמנון הסגול",
+        "צידנית גדולה",
+        "הוראות חיבור מים ובטיחות לשני המתקנים"
       ],
       en: [
-        "Small, safe inflatable",
-        "Ball pit or soft-play (subject to availability)",
-        "Fits indoor or outdoor spaces",
-        "12-hour rental"
+        "Twin-Lane Water Slide",
+        "Purple Octopus Water Park",
+        "Large cooler",
+        "Hookup + safety instructions for both rigs"
       ],
       ru: [
-        "Маленький безопасный батут",
-        "Бассейн с шариками или soft-play",
-        "Подходит для дома или улицы",
-        "Аренда 12 часов"
+        "Двухполосная водная горка",
+        "Водный парк Осьминог",
+        "Большой кулер",
+        "Инструкции по подключению и безопасности для обоих"
       ]
     },
-    optionalAddons: ["ball-pit", "soft-play", "play-mat"],
+    optionalAddons: ["generator", "popcorn-machine", "mascots-pair"],
     childMood: {
-      he: "לקטנטנים שצוחקים",
-      en: "For little smilers",
-      ru: "Для маленьких хохотушек"
+      he: "לאירוע מים גדול",
+      en: "For a big water event",
+      ru: "Для большого водного праздника"
     },
-    priceFrom: 690,
-    priceLabel: { he: "החל מ-₪690", en: "From ₪690", ru: "От ₪690" },
-    recommendedAges: "2-5",
+    priceFrom: 1190,
+    priceLabel: {
+      he: "₪1,190-₪1,390 לאירוע",
+      en: "₪1,190-₪1,390 per event",
+      ru: "₪1,190-₪1,390 за мероприятие"
+    },
+    recommendedAges: "4-14",
     durationHours: 12,
-    pickupOnly: true,
+    pickupOnly: false,
     setupNotes: {
-      he: "התקנה תוך 12 דק׳. גובה תקרה מומלץ 2.4 מ׳ ומעלה.",
-      en: "Setup in 12 minutes. Ceiling height of 2.4 m or more recommended.",
-      ru: "Установка за 12 минут. Высота потолка от 2,4 м."
+      he: "דורש שטח 10×6 מ׳ לפחות עם לחץ מים תקין ונקודת חשמל קרובה (או גנרטור).",
+      en: "Needs at least 10×6 m, working water pressure, and a nearby outlet (or a generator).",
+      ru: "Минимум 10×6 м, рабочий напор воды и розетка рядом (или генератор)."
     },
     safetyNotes: {
-      he: "התאמה מלאה לגילאי 2-5. השגחת מבוגר חובה.",
-      en: "Designed for ages 2-5. Adult supervision required.",
-      ru: "Создано для возраста 2-5. Обязателен взрослый."
+      he: "הפרדה ברורה בין שני המתקנים. מומלץ מפעיל/ת השגחה אחד/ת לכל מתקן.",
+      en: "Keep the two rigs separate. Recommended: one supervisor per rig.",
+      ru: "Разделить два батута. Рекомендуем одного взрослого на каждый."
     },
-    fits: { home: true, yard: true, water: false, indoor: true, outdoor: true },
+    fits: { home: false, yard: true, water: true, indoor: false, outdoor: true },
     image:
-      "https://images.unsplash.com/photo-1545048702-79362596cdc9?w=1400&q=80",
-    colorTheme: "mint",
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1400&q=80",
+    colorTheme: "sky",
     seoTitle: {
-      he: "חבילת פעוטות — מתנפחים לגילאי 2-5",
-      en: "Toddler Package — Inflatables for ages 2-5",
-      ru: "Пакет для малышей — батуты 2-5"
+      he: "חבילת Double Splash — שני מתנפחי מים לאירועי קיץ",
+      en: "Double Splash Package — two water inflatables for summer",
+      ru: "Пакет Double Splash — два водных батута"
     },
     seoDescription: {
-      he: "חבילת פעוטות בטוחה ורכה לגילאי 2-5. השכרה ל-12 שעות. החל מ-₪690.",
-      en: "Safe, soft toddler package for ages 2-5. 12-hour rental. From ₪690.",
-      ru: "Безопасный мягкий пакет для малышей 2-5. Аренда 12 часов. От ₪690."
+      he: "שני מתנפחי מים + צידנית לאירוע גדול. ₪1,190-₪1,390, בדיקת זמינות בוואטסאפ.",
+      en: "Two water inflatables + cooler for a bigger event. ₪1,190-₪1,390, availability via WhatsApp.",
+      ru: "Два водных батута + кулер для большого праздника. ₪1,190-₪1,390."
     },
     whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת פעוטות 🧸\nתאריך רצוי:\nשעת איסוף רצויה:\nגיל הפעוטות:\nמיקום (בית/חצר/גן):\nתודה!",
-      en: "Hi, I'd like to check availability for the Toddler package 🧸\nPreferred date:\nPickup time:\nToddler ages:\nLocation (home / yard / daycare):\nThanks!",
-      ru: "Здравствуйте, хочу проверить доступность пакета для малышей 🧸\nДата:\nВремя:\nВозраст малышей:\nМесто:\nСпасибо!"
+      he: "שלום, אני רוצה לבדוק זמינות לחבילת Double Splash 🌊\nתאריך רצוי:\nגילאי הילדים:\nכמות ילדים משוערת:\nגודל החצר ונקודת חשמל:\nמיקום:\nתודה!",
+      en: "Hi, I'd like to check availability for the Double Splash package 🌊\nPreferred date:\nKids' ages:\nEstimated kids:\nYard size and power outlet:\nLocation:\nThanks!",
+      ru: "Здравствуйте, хочу проверить доступность Double Splash 🌊\nДата:\nВозраст:\nКол-во:\nДвор и розетка:\nМесто:\nСпасибо!"
     }
   },
   {
-    id: "luxury-white",
-    slug: "luxury-white",
+    id: "sports-arena",
+    slug: "sports-arena",
+    sortOrder: 40,
+    isActive: true,
+    isFeatured: false,
+    isPopular: true,
+    category: "sports",
+    tags: ["popular", "family"],
+    title: {
+      he: "חבילת Sports Arena",
+      en: "Sports Arena Package",
+      ru: "Пакет Sports Arena"
+    },
+    subtitle: {
+      he: "מיני טורניר כדורגל, כדורסל וכדורעף",
+      en: "Mini soccer, basketball and volleyball tournament",
+      ru: "Мини-турнир по футболу, баскетболу и волейболу"
+    },
+    description: {
+      he: "החבילה האנרגטית ביותר שלנו — מגרש ספורט מתנפח שמאפשר טורניר אמיתי בחצר. מומלץ לגילאי 6-12 ולילדים שאוהבים תחרות ומשחקי קבוצה.",
+      en: "Our most energetic package — an inflatable sports field that turns the yard into a real tournament. Best for ages 6-12 who love team play.",
+      ru: "Наш самый энергичный пакет — надувной спортивный мини-стадион. Идеально для возраста 6-12 и командной игры."
+    },
+    bestFor: {
+      he: "גילאי 6-12, ימי הולדת אנרגטיים, אירועי שכונה",
+      en: "Ages 6-12, energetic birthdays, neighborhood events",
+      ru: "6-12, энергичные дни рождения, дворовые праздники"
+    },
+    includes: {
+      he: [
+        "מגרש ספורט מתנפח (כדורגל / כדורסל / כדורעף)",
+        "הנחיות בטיחות והפרדה לפי גילאים",
+        "התאמה למספר הילדים והמיקום"
+      ],
+      en: [
+        "Inflatable sports field (soccer / basketball / volleyball)",
+        "Safety guidelines and age-based separation",
+        "Tailored to kid count and venue"
+      ],
+      ru: [
+        "Надувное спортивное поле",
+        "Инструкции по безопасности и разделению по возрастам",
+        "Подбор под количество детей и место"
+      ]
+    },
+    optionalAddons: ["popcorn-machine", "mascot-single", "cooler"],
+    childMood: {
+      he: "לילדים שאוהבים אקשן",
+      en: "For action-loving kids",
+      ru: "Для активных детей"
+    },
+    priceFrom: 899,
+    priceLabel: {
+      he: "₪899-₪1,090 לאירוע",
+      en: "₪899-₪1,090 per event",
+      ru: "₪899-₪1,090 за мероприятие"
+    },
+    recommendedAges: "6-12",
+    durationHours: 12,
+    pickupOnly: false,
+    setupNotes: {
+      he: "דורש שטח של 9×4.5 מ׳ לפחות. מתאים לדשא או רצפת בטון חלקה.",
+      en: "Needs at least 9×4.5 m. Works on grass or smooth concrete.",
+      ru: "Минимум 9×4,5 м. Газон или ровный бетон."
+    },
+    safetyNotes: {
+      he: "השגחת מבוגר חובה. הפרדה בין קבוצות גיל וכמות ילדים מותרת בו-זמנית.",
+      en: "Adult supervision required. Separate age groups and limit simultaneous players.",
+      ru: "Обязателен взрослый. Разделение по возрастам, ограничение одновременных игроков."
+    },
+    fits: { home: false, yard: true, water: false, indoor: false, outdoor: true },
+    image:
+      "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1400&q=80",
+    colorTheme: "mint",
+    seoTitle: {
+      he: "חבילת Sports Arena — מגרש ספורט מתנפח להשכרה",
+      en: "Sports Arena Package — inflatable sports field rental",
+      ru: "Пакет Sports Arena — надувное спортивное поле"
+    },
+    seoDescription: {
+      he: "מגרש ספורט מתנפח לכדורגל וכדורסל. ₪899-₪1,090, בדיקת זמינות בוואטסאפ.",
+      en: "Inflatable sports field for soccer and basketball. ₪899-₪1,090, availability via WhatsApp.",
+      ru: "Надувное поле для футбола и баскетбола. ₪899-₪1,090."
+    },
+    whatsappTemplate: {
+      he: "שלום, אני רוצה לבדוק זמינות לחבילת Sports Arena ⚽\nתאריך רצוי:\nגילאי הילדים:\nכמות ילדים משוערת:\nמיקום וגודל המגרש:\nתודה!",
+      en: "Hi, I'd like to check availability for the Sports Arena package ⚽\nPreferred date:\nKids' ages:\nEstimated kids:\nVenue and field size:\nThanks!",
+      ru: "Здравствуйте, хочу проверить доступность Sports Arena ⚽\nДата:\nВозраст:\nКол-во:\nМесто и размер площадки:\nСпасибо!"
+    }
+  },
+  {
+    id: "mega-party",
+    slug: "mega-party",
+    sortOrder: 50,
+    isActive: true,
+    isFeatured: true,
+    isPopular: false,
+    category: "premium",
+    tags: ["premium", "summer", "instagram"],
+    title: {
+      he: "חבילת Mega Party",
+      en: "Mega Party Package",
+      ru: "Пакет Mega Party"
+    },
+    subtitle: {
+      he: "אירוע שילדים יזכרו",
+      en: "An event the kids will remember",
+      ru: "Праздник, который запомнится"
+    },
+    description: {
+      he: "אירוע קיץ פרימיום — שני מתנפחי מים גדולים, מכונת פופקורן ובובות ענק. WOW לאורחים ולתמונות.",
+      en: "Premium summer event — two large water inflatables, popcorn machine, and giant mascots. WOW for guests and photos.",
+      ru: "Премиум-летний праздник — два больших водных батута, попкорн-машина и гигантские маскоты."
+    },
+    bestFor: {
+      he: "ימי הולדת גדולים, אירועי קיץ, משפחות שרוצות חוויה מלאה",
+      en: "Big birthdays, summer events, families who want the full experience",
+      ru: "Большие дни рождения, летние мероприятия, полный праздник"
+    },
+    includes: {
+      he: [
+        "מתנפח מים ענק עם 2 מגלשות",
+        "מגלשת מים דו-מסלולית",
+        "מכונת פופקורן + שערות סבתא",
+        "בובות ענק לאירוע (זוג דובי 3.2מ + בייבי בוס 3מ)"
+      ],
+      en: [
+        "Mega Water Park with two slides",
+        "Twin-Lane Water Slide",
+        "Popcorn + cotton candy machine",
+        "Giant mascots set (pair of 3.2 m bears + 3 m Baby Boss)"
+      ],
+      ru: [
+        "Огромный водный батут с двумя горками",
+        "Двухполосная водная горка",
+        "Попкорн-машина + сахарная вата",
+        "Гигантские маскоты (медведи 3,2 м + Бэйби Босс 3 м)"
+      ]
+    },
+    optionalAddons: ["generator", "cooler", "bambi-backdrop"],
+    childMood: {
+      he: "לאירוע שילדים יזכרו",
+      en: "For an event they'll remember",
+      ru: "Чтобы запомнили"
+    },
+    priceFrom: 1590,
+    priceLabel: {
+      he: "₪1,590-₪1,990 לאירוע",
+      en: "₪1,590-₪1,990 per event",
+      ru: "₪1,590-₪1,990 за мероприятие"
+    },
+    recommendedAges: "4-14",
+    durationHours: 12,
+    pickupOnly: false,
+    setupNotes: {
+      he: "שטח של 12×6 מ׳ לפחות, חיבור מים תקין ונקודת חשמל (או גנרטור).",
+      en: "At least 12×6 m, working water connection and power outlet (or generator).",
+      ru: "Минимум 12×6 м, рабочая вода и розетка (или генератор)."
+    },
+    safetyNotes: {
+      he: "השגחה צמודה לכל מתקן. הפרדת ילדים לפי גיל ומספר.",
+      en: "Dedicated supervision per rig. Separate by age and number.",
+      ru: "Постоянный присмотр у каждого батута. Разделение по возрасту и количеству."
+    },
+    fits: { home: false, yard: true, water: true, indoor: false, outdoor: true },
+    image:
+      "https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=1400&q=80",
+    colorTheme: "coral",
+    seoTitle: {
+      he: "חבילת Mega Party — שני מתנפחי מים, פופקורן ובובות ענק",
+      en: "Mega Party Package — two water inflatables, popcorn, giant mascots",
+      ru: "Пакет Mega Party — два водных батута, попкорн, маскоты"
+    },
+    seoDescription: {
+      he: "חבילת אירוע קיץ פרימיום — מים, פופקורן ובובות ענק. ₪1,590-₪1,990, בדיקת זמינות בוואטסאפ.",
+      en: "Premium summer event package — water, popcorn, giant mascots. ₪1,590-₪1,990, availability via WhatsApp.",
+      ru: "Премиум летний пакет — вода, попкорн, маскоты. ₪1,590-₪1,990."
+    },
+    whatsappTemplate: {
+      he: "שלום, אני רוצה לבדוק זמינות לחבילת Mega Party 🎉\nתאריך רצוי:\nגילאי הילדים:\nכמות ילדים משוערת:\nגודל החצר ונקודת חשמל:\nמיקום:\nתודה!",
+      en: "Hi, I'd like to check availability for the Mega Party package 🎉\nPreferred date:\nKids' ages:\nEstimated kids:\nYard size and outlet:\nLocation:\nThanks!",
+      ru: "Здравствуйте, хочу проверить доступность Mega Party 🎉\nДата:\nВозраст:\nКол-во:\nДвор и розетка:\nМесто:\nСпасибо!"
+    }
+  },
+  {
+    id: "instagram-wow",
+    slug: "instagram-wow",
     sortOrder: 60,
     isActive: true,
     isFeatured: false,
@@ -468,448 +483,185 @@ export const packages: RentalPackage[] = [
     category: "luxury-white",
     tags: ["luxury", "instagram", "premium"],
     title: {
-      he: "חבילת לבן יוקרתית",
-      en: "Luxury White Package",
-      ru: "Люксовый белый пакет"
+      he: "חבילת Instagram WOW",
+      en: "Instagram WOW Package",
+      ru: "Пакет Instagram WOW"
     },
     subtitle: {
-      he: "אירועים מצולמים, בנות מצווה, ימי הולדת יוקרתיים",
-      en: "Styled events, bat-mitzvahs, upscale birthdays",
-      ru: "Стильные мероприятия, бат-мицвы, элитные дни рождения"
+      he: "החבילה המצטלמת ביותר",
+      en: "The most photogenic package",
+      ru: "Самый фотогеничный пакет"
     },
     description: {
-      he: "המתנפח הלבן שלנו. נראות ניטרלית, אסתטיקה מצולמת, בחירה ראשונה לאירועי בוטיק.",
-      en: "Our white inflatable. Neutral palette, photogenic styling, the boutique-event favorite.",
-      ru: "Наш белый батут. Нейтральная палитра, фотогеничный стиль, фаворит бутик-мероприятий."
+      he: "חבילה שמיועדת לאינסטגרם — מתנפח גדול לבחירה, בובות ענק, רקע קאפה במבי לצילומים ומכונת פופקורן. כל פרט בה מתוכנן לתמונה אחת בלתי נשכחת.",
+      en: "An Instagram-first package — choice of large inflatable, giant mascots, Bambi photo backdrop, and a popcorn machine. Every detail engineered for a single unforgettable photo.",
+      ru: "Пакет для Instagram — большой батут на выбор, маскоты, фотофон Бэмби и попкорн-машина. Каждая деталь для одного незабываемого кадра."
     },
     bestFor: {
-      he: "אירועים מצולמים, בנות מצווה, ימי הולדת יוקרתיים",
-      en: "Photographed events, bat-mitzvahs, upscale birthdays",
-      ru: "Фото-мероприятия, бат-мицвы, премиум дни рождения"
+      he: "אירועים מצולמים, ימי הולדת מעוצבים",
+      en: "Photo-driven events, styled birthdays",
+      ru: "Фото-мероприятия, стильные дни рождения"
     },
     includes: {
       he: [
-        "מתנפח לבן / אסתטי",
-        "עיצוב נקי",
-        "התאמה לצילומים",
-        "אפשרות לשילוב בלונים (בקרוב)"
+        "מתנפח גדול לבחירה",
+        "בובות ענק לאירוע",
+        "רקע קאפה במבי",
+        "מכונת פופקורן + שערות סבתא"
       ],
       en: [
-        "White / styled inflatable",
-        "Clean design",
-        "Photo-friendly setup",
-        "Balloon pairing (coming soon)"
+        "Choice of a large inflatable",
+        "Giant mascots set",
+        "Bambi photo backdrop",
+        "Popcorn + cotton candy machine"
       ],
       ru: [
-        "Белый / стильный батут",
-        "Чистый дизайн",
-        "Подготовка под фото",
-        "Шары (скоро)"
+        "Большой батут на выбор",
+        "Гигантские маскоты",
+        "Фотофон Бэмби",
+        "Попкорн-машина + сахарная вата"
       ]
     },
-    optionalAddons: ["soft-play", "play-mat", "decor-balloons-soon"],
+    optionalAddons: ["generator", "cooler"],
     childMood: {
       he: "ליום הולדת מהאינסטגרם",
       en: "For an Instagram-style party",
       ru: "Для Instagram-стиля"
     },
-    priceFrom: 1690,
-    priceLabel: { he: "החל מ-₪1,690", en: "From ₪1,690", ru: "От ₪1,690" },
-    recommendedAges: "2-14",
+    priceFrom: 2500,
+    priceLabel: {
+      he: "₪2,500-₪3,500 לאירוע",
+      en: "₪2,500-₪3,500 per event",
+      ru: "₪2,500-₪3,500 за мероприятие"
+    },
+    recommendedAges: "3-14",
     durationHours: 12,
-    pickupOnly: true,
+    pickupOnly: false,
     setupNotes: {
-      he: "מומלץ למשטח דשא נקי או רצפת בית בהירה.",
-      en: "Best on clean grass or a light indoor floor.",
-      ru: "Идеально на чистом газоне или светлом полу."
+      he: "מומלץ דשא נקי או רצפה בהירה. צילום בשעות אור טבעי.",
+      en: "Best on clean grass or a light floor. Shoot during natural light.",
+      ru: "Идеально на чистом газоне или светлом полу. Снимать при дневном свете."
     },
     safetyNotes: {
-      he: "השגחת מבוגר. בלי נעליים, בלי אוכל, בלי חפצים חדים.",
-      en: "Adult supervision. No shoes, no food, no sharp objects.",
-      ru: "Присмотр взрослого. Без обуви, еды и острых предметов."
+      he: "השגחת מבוגר. הפרדת אזורי הצילום מאזורי המשחק.",
+      en: "Adult supervision. Separate photo and play zones.",
+      ru: "Присмотр взрослого. Разделение фото- и игровой зон."
     },
     fits: { home: true, yard: true, water: false, indoor: true, outdoor: true },
     image:
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1400&q=80",
     colorTheme: "cream",
     seoTitle: {
-      he: "חבילת לבן יוקרתית — מתנפח לבן להשכרה",
-      en: "Luxury White Inflatable Rental Package",
-      ru: "Люксовый белый пакет аренды"
+      he: "חבילת Instagram WOW — אירוע מצולם עם בובות ענק ורקע צילום",
+      en: "Instagram WOW Package — photogenic event with mascots and backdrop",
+      ru: "Пакет Instagram WOW — фото-праздник с маскотами и фоном"
     },
     seoDescription: {
-      he: "מתנפח לבן יוקרתי לאירועים מצולמים. החל מ-₪1,690.",
-      en: "Luxury white inflatable for styled, photogenic events. From ₪1,690.",
-      ru: "Люксовый белый батут для эффектных мероприятий. От ₪1,690."
+      he: "חבילה לאירועים מצולמים — מתנפח גדול, בובות ענק ורקע במבי. ₪2,500-₪3,500.",
+      en: "Photo-driven package — large inflatable, mascots, Bambi backdrop. ₪2,500-₪3,500.",
+      ru: "Пакет для фото — большой батут, маскоты, фон. ₪2,500-₪3,500."
     },
     whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת לבן יוקרתית 🤍\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים:\nסוג האירוע:\nתודה!",
-      en: "Hi, I'd like to check availability for the Luxury White package 🤍\nPreferred date:\nPickup time:\nKids' ages:\nEvent type:\nThanks!",
-      ru: "Здравствуйте, хочу проверить доступность Люксового белого пакета 🤍\nДата:\nВремя:\nВозраст детей:\nТип праздника:\nСпасибо!"
+      he: "שלום, אני רוצה לבדוק זמינות לחבילת Instagram WOW ✨\nתאריך רצוי:\nגיל הילדים:\nכמות ילדים משוערת:\nמיקום וסגנון רצוי:\nתודה!",
+      en: "Hi, I'd like to check availability for the Instagram WOW package ✨\nPreferred date:\nKids' ages:\nEstimated kids:\nLocation and desired style:\nThanks!",
+      ru: "Здравствуйте, хочу проверить доступность Instagram WOW ✨\nДата:\nВозраст:\nКол-во:\nМесто и стиль:\nСпасибо!"
     }
   },
   {
-    id: "indoor-winter",
-    slug: "indoor-winter",
+    id: "festival",
+    slug: "festival",
     sortOrder: 70,
     isActive: true,
     isFeatured: false,
     isPopular: false,
-    category: "indoor",
-    tags: ["indoor", "winter"],
+    category: "festival",
+    tags: ["family", "premium", "summer"],
     title: {
-      he: "חבילת Indoor לחורף",
-      en: "Indoor Winter Package",
-      ru: "Зимний пакет для дома"
+      he: "חבילת Festival",
+      en: "Festival Package",
+      ru: "Пакет Festival"
     },
     subtitle: {
-      he: "בתים, גני ילדים, חללים סגורים",
-      en: "Homes, daycares, indoor spaces",
-      ru: "Дома, детские сады, закрытые помещения"
+      he: "מיני לונה פארק פרטי",
+      en: "A private mini amusement park",
+      ru: "Личный мини-парк аттракционов"
     },
     description: {
-      he: "מתנפח קומפקטי שמתאים לסלון, חדר משחקים או גן. בלי תלות במזג אוויר.",
-      en: "Compact inflatable that fits a living room, playroom or daycare. Weather-proof.",
-      ru: "Компактный батут для гостиной, игровой комнаты или детсада. Не зависит от погоды."
+      he: "החבילה האולטימטיבית — שלושה מתנפחים לבחירה, בובות ענק, גנרטור, פופקורן וצידנית. מתאים לאירועים גדולים, קייטנות וועדי עובדים.",
+      en: "The ultimate package — three inflatables of your choice, giant mascots, generator, popcorn and cooler. Built for big events, camps and workplace parties.",
+      ru: "Главный пакет — три батута на выбор, маскоты, генератор, попкорн и кулер. Для больших праздников и корпоративов."
     },
     bestFor: {
-      he: "בתים, גני ילדים, חללים סגורים",
-      en: "Homes, daycares, indoor spaces",
-      ru: "Дома, детские сады, закрытые помещения"
+      he: "אירועים גדולים, קייטנות, ועדי עובדים, אירועי שכונה",
+      en: "Big events, camps, workplace events, neighborhood parties",
+      ru: "Большие мероприятия, лагеря, корпоративы"
     },
     includes: {
       he: [
-        "מתנפח קומפקטי Indoor",
-        "מתאים לחללים סגורים",
-        "ללא תלות במזג אוויר",
-        "השכרה ל-12 שעות"
+        "3 מתנפחים לבחירה",
+        "בובות ענק לאירוע",
+        "גנרטור",
+        "מכונת פופקורן + שערות סבתא",
+        "צידנית גדולה"
       ],
       en: [
-        "Compact indoor inflatable",
-        "Fits enclosed spaces",
-        "Weather-proof",
-        "12-hour rental"
+        "Three inflatables of your choice",
+        "Giant mascots set",
+        "Generator",
+        "Popcorn + cotton candy machine",
+        "Large cooler"
       ],
       ru: [
-        "Компактный домашний батут",
-        "Помещается в закрытых пространствах",
-        "Независим от погоды",
-        "Аренда 12 часов"
+        "Три батута на выбор",
+        "Гигантские маскоты",
+        "Генератор",
+        "Попкорн-машина + сахарная вата",
+        "Большой кулер"
       ]
     },
-    optionalAddons: ["soft-play", "play-mat", "ext-cord"],
+    optionalAddons: ["bambi-backdrop"],
     childMood: {
-      he: "לבית חמים בחורף",
-      en: "For a cozy winter day",
-      ru: "Для уютного зимнего дня"
+      he: "לאירוע ענק",
+      en: "For a huge event",
+      ru: "Для большого праздника"
     },
-    priceFrom: 890,
-    priceLabel: { he: "החל מ-₪890", en: "From ₪890", ru: "От ₪890" },
-    recommendedAges: "2-8",
-    durationHours: 12,
-    pickupOnly: true,
-    setupNotes: {
-      he: "דורש תקרה 2.4 מ׳ ומעלה, פתח מעבר 90 ס״מ.",
-      en: "Needs a 2.4 m+ ceiling and a 90 cm doorway.",
-      ru: "Нужен потолок от 2,4 м и дверной проём 90 см."
+    priceFrom: 3500,
+    priceLabel: {
+      he: "₪3,500-₪5,500 לאירוע",
+      en: "₪3,500-₪5,500 per event",
+      ru: "₪3,500-₪5,500 за мероприятие"
     },
-    safetyNotes: {
-      he: "השגחת מבוגר חובה. הסרת חפצים שבירים מסביב.",
-      en: "Adult supervision required. Clear fragile items nearby.",
-      ru: "Обязателен присмотр. Уберите хрупкие предметы."
-    },
-    fits: { home: true, yard: false, water: false, indoor: true, outdoor: false },
-    image:
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1400&q=80",
-    colorTheme: "mint",
-    seoTitle: {
-      he: "חבילת Indoor — מתנפחים לבית בחורף",
-      en: "Indoor Winter Inflatable Package",
-      ru: "Зимний пакет для дома"
-    },
-    seoDescription: {
-      he: "מתנפח קומפקטי לבית, אירועי חורף וגני ילדים. החל מ-₪890.",
-      en: "Compact indoor inflatable for homes, daycares, and winter events. From ₪890.",
-      ru: "Компактный батут для дома, детсадов и зимних праздников. От ₪890."
-    },
-    whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת Indoor 🏠\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים:\nגודל החלל (אורך×רוחב):\nתודה!",
-      en: "Hi, I'd like to check availability for the Indoor package 🏠\nPreferred date:\nPickup time:\nKids' ages:\nRoom size (L×W):\nThanks!",
-      ru: "Здравствуйте, хочу проверить доступность пакета Indoor 🏠\nДата:\nВремя:\nВозраст детей:\nРазмер помещения:\nСпасибо!"
-    }
-  },
-  {
-    id: "family-combo",
-    slug: "family-combo",
-    sortOrder: 80,
-    isActive: true,
-    isFeatured: false,
-    isPopular: false,
-    category: "combo",
-    tags: ["family"],
-    title: {
-      he: "חבילת Combo משפחתית",
-      en: "Family Combo Package",
-      ru: "Семейный комбо-пакет"
-    },
-    subtitle: {
-      he: "אירועים עם כמה גילאים",
-      en: "Events with several age groups",
-      ru: "Праздники с разными возрастами"
-    },
-    description: {
-      he: "מתנפח גדול + תוספת משחק. גם הקטנים נהנים, גם הגדולים — בלי לבחור.",
-      en: "Big inflatable + game add-on. Younger and older kids enjoy together.",
-      ru: "Большой батут + дополнение. И малыши, и постарше — все вместе."
-    },
-    bestFor: {
-      he: "אירועים עם כמה גילאים",
-      en: "Events with several age groups",
-      ru: "Мероприятия с разными возрастами"
-    },
-    includes: {
-      he: [
-        "מתנפח גדול",
-        "תוספת משחק / קליעה / כדורים",
-        "פתרון גם לקטנים וגם לגדולים",
-        "השכרה ל-12 שעות"
-      ],
-      en: [
-        "Large inflatable",
-        "Game / archery / ball add-on",
-        "Fits both younger and older kids",
-        "12-hour rental"
-      ],
-      ru: [
-        "Большой батут",
-        "Игровое дополнение",
-        "Подходит и младшим, и старшим",
-        "Аренда 12 часов"
-      ]
-    },
-    optionalAddons: ["ball-pit", "archery", "soccer-goal", "extra-blower"],
-    childMood: {
-      he: "לחגיגה משפחתית",
-      en: "For a family celebration",
-      ru: "Для семейного праздника"
-    },
-    priceFrom: 1890,
-    priceLabel: { he: "החל מ-₪1,890", en: "From ₪1,890", ru: "От ₪1,890" },
     recommendedAges: "3-14",
     durationHours: 12,
-    pickupOnly: true,
+    pickupOnly: false,
     setupNotes: {
-      he: "דורש טנדר/רכב משפחתי גדול. שטח הקמה 7×6 מ׳.",
-      en: "Needs a van/large family car. 7×6 m setup area.",
-      ru: "Нужен фургон/большой авто. Площадка 7×6 м."
+      he: "דורש שטח גדול (15×10 מ׳ ומעלה), הקמה מאורגנת מראש.",
+      en: "Needs a large area (15×10 m or more), pre-planned setup.",
+      ru: "Требует большую площадку (15×10 м и больше), плановая установка."
     },
     safetyNotes: {
-      he: "להפריד שימוש לפי גילאים. השגחת מבוגר חובה.",
-      en: "Separate usage by age. Adult supervision required.",
-      ru: "Разделять по возрасту. Обязателен взрослый."
+      he: "מומלץ צוות השגחה של 2-3 מבוגרים. הפרדה ברורה בין המתקנים.",
+      en: "Recommended: 2-3 adult supervisors. Keep rigs well separated.",
+      ru: "Рекомендуем 2-3 взрослых. Чётко разделить батуты."
     },
-    fits: { home: false, yard: true, water: false, indoor: false, outdoor: true },
+    fits: { home: false, yard: true, water: true, indoor: false, outdoor: true },
     image:
       "https://images.unsplash.com/photo-1571999292598-9a8e95a2c9cf?w=1400&q=80",
     colorTheme: "sun",
     seoTitle: {
-      he: "חבילת Combo משפחתית — מתנפח גדול ותוספת משחק",
-      en: "Family Combo Inflatable Package",
-      ru: "Семейный комбо-пакет"
+      he: "חבילת Festival — מיני לונה פארק פרטי לאירועים גדולים",
+      en: "Festival Package — private mini amusement park for big events",
+      ru: "Пакет Festival — мини-парк аттракционов для больших мероприятий"
     },
     seoDescription: {
-      he: "חבילת Combo משפחתית עם מתנפח גדול ותוספת משחק. החל מ-₪1,890.",
-      en: "Family combo with a large inflatable + game add-on. From ₪1,890.",
-      ru: "Семейный комбо с большим батутом и дополнением. От ₪1,890."
+      he: "3 מתנפחים, בובות ענק, גנרטור, פופקורן וצידנית. ₪3,500-₪5,500, בדיקת זמינות בוואטסאפ.",
+      en: "3 inflatables, mascots, generator, popcorn and cooler. ₪3,500-₪5,500, availability via WhatsApp.",
+      ru: "3 батута, маскоты, генератор, попкорн, кулер. ₪3,500-₪5,500."
     },
     whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת Combo משפחתית 👨‍👩‍👧‍👦\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים (טווחים):\nגודל החצר:\nתודה!",
-      en: "Hi, I'd like to check availability for the Family Combo package 👨‍👩‍👧‍👦\nPreferred date:\nPickup time:\nKids' age range:\nYard size:\nThanks!",
-      ru: "Здравствуйте, хочу проверить доступность Семейного комбо 👨‍👩‍👧‍👦\nДата:\nВремя:\nВозраст детей:\nРазмер двора:\nСпасибо!"
-    }
-  },
-  {
-    id: "extra-fun",
-    slug: "extra-fun",
-    sortOrder: 90,
-    isActive: true,
-    isFeatured: false,
-    isPopular: false,
-    category: "extra",
-    tags: ["best-value", "family"],
-    title: {
-      he: "חבילת אקסטרה Fun",
-      en: "Extra Fun Package",
-      ru: "Пакет Extra Fun"
-    },
-    subtitle: {
-      he: "אירוע גדול יותר, חוויה מלאה",
-      en: "Bigger event, full experience",
-      ru: "Большое мероприятие, полный опыт"
-    },
-    description: {
-      he: "שני מתנפחים, תוספת משחק חצר, התאמה לגילאים — וגם עדיפות בתיאום זמינות.",
-      en: "Two inflatables, yard-game add-on, age-tailored, and availability priority.",
-      ru: "Два батута, дворовые игры, подбор по возрасту и приоритет в бронировании."
-    },
-    bestFor: {
-      he: "אירועים גדולים, יום הולדת בכיתה, אירוע שכונה",
-      en: "Big events, classroom birthdays, neighborhood parties",
-      ru: "Большие праздники, классные дни рождения"
-    },
-    includes: {
-      he: [
-        "שני מתנפחים",
-        "תוספת משחק חצר",
-        "התאמת חבילה לפי גילאים",
-        "עדיפות בתיאום זמינות"
-      ],
-      en: [
-        "Two inflatables",
-        "Yard-game add-on",
-        "Age-tailored package",
-        "Priority availability"
-      ],
-      ru: [
-        "Два батута",
-        "Дворовые игры",
-        "Подбор по возрасту",
-        "Приоритет в бронировании"
-      ]
-    },
-    optionalAddons: ["ball-pit", "soccer-goal", "yard-games", "extra-blower"],
-    childMood: {
-      he: "לילדים שאוהבים אקשן",
-      en: "For action-loving kids",
-      ru: "Для активных детей"
-    },
-    priceFrom: 2400,
-    priceLabel: { he: "החל מ-₪2,400", en: "From ₪2,400", ru: "От ₪2,400" },
-    recommendedAges: "4-14",
-    durationHours: 12,
-    pickupOnly: true,
-    setupNotes: {
-      he: "דורש 2 איסופים בו-זמנית או טנדר גדול.",
-      en: "Two pickups simultaneously or a large van.",
-      ru: "Два самовывоза одновременно или большой фургон."
-    },
-    safetyNotes: {
-      he: "השגחה צמודה לכל מתנפח. כללי בטיחות נפרדים לכל מתקן.",
-      en: "Dedicated supervision per inflatable. Separate safety rules.",
-      ru: "Отдельный присмотр для каждого батута."
-    },
-    fits: { home: false, yard: true, water: true, indoor: false, outdoor: true },
-    image:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1400&q=80",
-    colorTheme: "coral",
-    seoTitle: {
-      he: "חבילת אקסטרה Fun — מתנפחים לאירועים גדולים",
-      en: "Extra Fun Inflatable Package",
-      ru: "Пакет Extra Fun — большие праздники"
-    },
-    seoDescription: {
-      he: "שני מתנפחים + תוספת לאירוע גדול. החל מ-₪2,400.",
-      en: "Two inflatables + add-on for big events. From ₪2,400.",
-      ru: "Два батута + дополнения для больших праздников. От ₪2,400."
-    },
-    whatsappTemplate: {
-      he: "שלום, אני רוצה לבדוק זמינות עבור חבילת אקסטרה Fun 🚀\nתאריך רצוי:\nשעת איסוף רצויה:\nגילאי הילדים:\nמיקום וגודל המקום:\nכמות ילדים מוערכת:\nתודה!",
-      en: "Hi, I'd like to check availability for the Extra Fun package 🚀\nPreferred date:\nPickup time:\nKids' ages:\nLocation & size:\nEstimated number of kids:\nThanks!",
-      ru: "Здравствуйте, хочу проверить доступность пакета Extra Fun 🚀\nДата:\nВремя:\nВозраст детей:\nМесто и размер:\nКоличество детей:\nСпасибо!"
-    }
-  },
-  {
-    id: "custom",
-    slug: "custom",
-    sortOrder: 100,
-    isActive: true,
-    isFeatured: false,
-    isPopular: false,
-    category: "custom",
-    tags: ["custom"],
-    title: {
-      he: "חבילה בהתאמה אישית",
-      en: "Custom Package",
-      ru: "Индивидуальный пакет"
-    },
-    subtitle: {
-      he: "מי שלא יודע מה לבחור",
-      en: "When you don't know which package fits",
-      ru: "Когда не знаете, что выбрать"
-    },
-    description: {
-      he: "ספרו לנו על הילדים והאירוע — נחזיר המלצה מותאמת אישית והצעת מחיר בוואטסאפ.",
-      en: "Tell us about the kids and the event — we'll send a tailored recommendation and quote on WhatsApp.",
-      ru: "Расскажите о детях и празднике — пришлём индивидуальную рекомендацию и цену в WhatsApp."
-    },
-    bestFor: {
-      he: "מי שלא יודע מה לבחור או מתכנן אירוע ייחודי",
-      en: "Anyone unsure which package to pick, or planning a unique event",
-      ru: "Тем, кто сомневается, или планирует уникальное событие"
-    },
-    includes: {
-      he: [
-        "התאמה לפי גילאי הילדים",
-        "התאמה לפי גודל החצר / הבית",
-        "התאמה לפי עונה",
-        "המלצה אישית בוואטסאפ"
-      ],
-      en: [
-        "Tailored to kids' ages",
-        "Tailored to yard / home size",
-        "Tailored to the season",
-        "Personal recommendation on WhatsApp"
-      ],
-      ru: [
-        "Подбор по возрасту",
-        "Подбор по размеру",
-        "Подбор по сезону",
-        "Личная рекомендация в WhatsApp"
-      ]
-    },
-    optionalAddons: ["ball-pit", "soft-play", "soccer-goal", "yard-games"],
-    childMood: {
-      he: "ליום הולדת ייחודי",
-      en: "For a one-of-a-kind party",
-      ru: "Для уникального праздника"
-    },
-    priceFrom: 0,
-    priceLabel: {
-      he: "מחיר לפי התאמה",
-      en: "Custom pricing",
-      ru: "Цена под заказ"
-    },
-    recommendedAges: "1-14",
-    durationHours: 12,
-    pickupOnly: true,
-    setupNotes: {
-      he: "ההתקנה משתנה לפי המתנפח שנבחר.",
-      en: "Setup varies by chosen inflatable.",
-      ru: "Установка зависит от выбора."
-    },
-    safetyNotes: {
-      he: "כל המתנפחים שלנו עומדים בתקני בטיחות אירופאיים.",
-      en: "All our inflatables meet European safety standards.",
-      ru: "Все батуты соответствуют европейским стандартам."
-    },
-    fits: { home: true, yard: true, water: true, indoor: true, outdoor: true },
-    image:
-      "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1400&q=80",
-    colorTheme: "ink",
-    seoTitle: {
-      he: "חבילה בהתאמה אישית — ייעוץ מותאם",
-      en: "Custom Inflatable Package — personalized consult",
-      ru: "Индивидуальный пакет батутов — консультация"
-    },
-    seoDescription: {
-      he: "לא בטוחים? בנו איתנו חבילה בהתאמה אישית בוואטסאפ.",
-      en: "Not sure? Build a custom package with us on WhatsApp.",
-      ru: "Не уверены? Соберём пакет вместе в WhatsApp."
-    },
-    whatsappTemplate: {
-      he: "שלום, אשמח לייעוץ לחבילה בהתאמה אישית 🧩\nגילאי הילדים:\nכמות ילדים מוערכת:\nתאריך רצוי:\nמיקום (בית/חצר/חוץ):\nתקציב כללי:\nתודה!",
-      en: "Hi, I'd like a custom package consult 🧩\nKids' ages:\nEstimated kids:\nPreferred date:\nLocation (home / yard / outdoor):\nRough budget:\nThanks!",
-      ru: "Здравствуйте, нужен индивидуальный подбор 🧩\nВозраст детей:\nКол-во:\nДата:\nМесто:\nБюджет:\nСпасибо!"
+      he: "שלום, אני רוצה לבדוק זמינות לחבילת Festival 🎪\nתאריך רצוי:\nגילאי הילדים:\nכמות ילדים משוערת:\nגודל המקום ונקודת חשמל:\nמיקום:\nתודה!",
+      en: "Hi, I'd like to check availability for the Festival package 🎪\nPreferred date:\nKids' ages:\nEstimated kids:\nVenue size and outlet:\nLocation:\nThanks!",
+      ru: "Здравствуйте, хочу проверить доступность Festival 🎪\nДата:\nВозраст:\nКол-во:\nРазмер места и розетка:\nМесто:\nСпасибо!"
     }
   }
 ];

@@ -73,6 +73,33 @@ export const categories: CategoryMeta[] = [
     description: "בריכות כדורים פרימיום במגוון גדלים — להוסיף לכל מתנפח.",
     emoji: "🎈",
     gradient: "from-sun-100 via-brand-50 to-sun-50"
+  },
+  {
+    id: "sports",
+    slug: "sports",
+    name: "מתנפחי ספורט",
+    tagline: "אנרגיה, תחרות וכיף",
+    description: "מגרשים מתנפחים לכדורגל, כדורסל וכדורעף — אירועים ספורטיביים לגילאי 6-12.",
+    emoji: "⚽",
+    gradient: "from-mint-100 via-sky-100 to-mint-50"
+  },
+  {
+    id: "activity",
+    slug: "activity",
+    name: "מתנפחי פעילות",
+    tagline: "כמה משחקים במתנפח אחד",
+    description: "מתנפחים משולבים עם תחנות פעילות, מגלשות, קיר טיפוס ובריכת כדורים.",
+    emoji: "🎯",
+    gradient: "from-sun-100 via-mint-50 to-sun-50"
+  },
+  {
+    id: "event-extra",
+    slug: "event-extras",
+    name: "תוספות לאירוע",
+    tagline: "השדרוגים שהופכים אירוע לחוויה",
+    description: "פופקורן, בובות ענק, גנרטור, צידנית ורקעי צילום — להשלים את האירוע.",
+    emoji: "🎁",
+    gradient: "from-cream-100 via-brand-50 to-cream-50"
   }
 ];
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, MessageCircle, Sparkles, Star } from "lucide-react";
+import { ArrowLeft, MessageCircle, Puzzle, Sparkles, Star } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
 
@@ -21,7 +21,7 @@ export function Hero() {
               className="pill text-sm"
             >
               <Sparkles className="h-3.5 w-3.5 text-brand-500" />
-              חוויות מתנפחים פרימיום למשפחות
+              מתנפחים, חבילות ותוספות לאירועי ילדים
             </motion.span>
 
             <motion.h1
@@ -30,8 +30,8 @@ export function Hero() {
               transition={{ delay: 0.05 }}
               className="heading-1 text-balance"
             >
-              השכרת מתנפחים פרימיום ברחובות —{" "}
-              <span className="text-brand-500">בלי כאב ראש להורים.</span>
+              מתנפחים והשכרת ציוד לשמחות —{" "}
+              <span className="text-brand-500">בלי לחץ, בלי תשלום באתר.</span>
             </motion.h1>
 
             <motion.p
@@ -40,9 +40,9 @@ export function Hero() {
               transition={{ delay: 0.12 }}
               className="body-lead max-w-xl"
             >
-              מתנפחים נקיים, מעוצבים ובטוחים לאירועי ילדים ברחובות, נס ציונה,
-              יבנה, גדרה ובכל איזור השפלה. השכרה ל-12 שעות, איסוף עצמי
-              מ{siteConfig.pickupAddress}, אישור זמינות מהיר בוואטסאפ.
+              בוחרים מתנפח או חבילה, מוסיפים שדרוגים, בודקים זמינות בוואטסאפ —
+              ויוצרים לילדים אירוע שהם לא ישכחו. שירות ברחובות, נס ציונה, יבנה,
+              גדרה ובכל אזור השפלה.
             </motion.p>
 
             <motion.div
@@ -51,21 +51,28 @@ export function Hero() {
               transition={{ delay: 0.18 }}
               className="flex flex-wrap items-center gap-3"
             >
-              <Link href="/catalog" className="btn-brand">
-                לקטלוג המתנפחים <ArrowLeft className="h-4 w-4" />
-              </Link>
               <a
                 href={buildWhatsAppLink(
                   siteConfig.whatsapp,
-                  "היי, אשמח להמלצה למתנפח 🎈"
+                  "היי, אשמח לבדוק זמינות לאירוע 🎈"
                 )}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-whatsapp"
               >
                 <MessageCircle className="h-4 w-4" />
-                שלחו לנו בוואטסאפ
+                בדיקת זמינות בוואטסאפ
               </a>
+              <Link href="/build-package" className="btn-brand">
+                <Puzzle className="h-4 w-4" />
+                בנו חבילה אישית
+              </Link>
+              <Link
+                href="/catalog"
+                className="btn-ghost text-sm"
+              >
+                לקטלוג המתנפחים <ArrowLeft className="h-4 w-4" />
+              </Link>
             </motion.div>
 
             <motion.div
@@ -86,8 +93,8 @@ export function Hero() {
                 <span className="font-semibold text-ink-700">4.9</span>
                 <span>· מאות משפחות מרוצות</span>
               </div>
-              <Stat label="שעות השכרה" value="12" />
-              <Stat label="מתנפחים בקטלוג" value="8+" />
+              <Stat label="חבילות מומלצות" value="7" />
+              <Stat label="מתנפחים בקטלוג" value="8" />
             </motion.div>
           </div>
 
@@ -106,9 +113,9 @@ export function Hero() {
                 }}
               />
               <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/60 to-transparent text-white">
-                <p className="text-sm/relaxed opacity-90">המתנפח הכי מצולם</p>
+                <p className="text-sm/relaxed opacity-90">חבילת הקיץ הכי מבוקשת</p>
                 <p className="font-display font-extrabold text-xl">
-                  אטלנטיס · פארק מים ענק
+                  Double Splash · שני מתנפחי מים
                 </p>
               </div>
             </div>

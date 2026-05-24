@@ -53,6 +53,10 @@ export const useProductStore = create<ProductStore>()(
     }),
     {
       name: "fun-israel:products",
+      // Bump when the seed catalog changes so cached client storage doesn't
+      // shadow the real inventory.
+      version: 2,
+      migrate: () => ({ products: seedProducts }),
       onRehydrateStorage: () => (state) => {
         state?.setHydrated(true);
       }

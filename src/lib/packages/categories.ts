@@ -52,6 +52,16 @@ export const packageCategories: PackageCategory[] = [
     emoji: "🚀"
   },
   {
+    id: "sports",
+    label: { he: "ספורט", en: "Sports", ru: "Спорт" },
+    emoji: "⚽"
+  },
+  {
+    id: "festival",
+    label: { he: "פסטיבל", en: "Festival", ru: "Фестиваль" },
+    emoji: "🎪"
+  },
+  {
     id: "custom",
     label: { he: "Custom", en: "Custom", ru: "Индивидуально" },
     emoji: "🧩"

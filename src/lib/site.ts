@@ -23,10 +23,10 @@ export type SiteConfig = typeof siteConfig;
 export const navLinks = [
   { label: "בית", href: "/" },
   { label: "קטלוג", href: "/catalog" },
-  { label: "ימי הולדת", href: "/categories/birthday" },
+  { label: "חבילות", href: "/packages" },
+  { label: "בנו חבילה", href: "/build-package" },
   { label: "מתנפחי מים", href: "/categories/water" },
-  { label: "אינדור", href: "/categories/indoor" },
-  { label: "פעוטות", href: "/categories/toddler" },
+  { label: "מתנפחי ספורט", href: "/categories/sports" },
   { label: "שאלות נפוצות", href: "/faq" },
   { label: "צור קשר", href: "/contact" }
 ];
@@ -35,8 +35,9 @@ export const footerLinks = {
   shop: [
     { label: "כל המתנפחים", href: "/catalog" },
     { label: "החבילות שלנו", href: "/packages" },
-    { label: "מתנפחי פרימיום", href: "/categories/premium" },
-    { label: "חבילות יום הולדת", href: "/birthday-packages" }
+    { label: "בנו חבילה אישית", href: "/build-package" },
+    { label: "מתנפחי מים", href: "/categories/water" },
+    { label: "תוספות לאירוע", href: "/categories/event-extras" }
   ],
   info: [
     { label: "אודות", href: "/about" },

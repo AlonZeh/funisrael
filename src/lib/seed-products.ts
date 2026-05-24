@@ -1,234 +1,273 @@
 import type { Product } from "./types";
 
 /**
- * Seed inventory for FUN-ISRAEL.
- * Inspired by leading premium inflatable models on the Israeli market.
- * Images use Unsplash placeholders — replace with real product photography in admin.
+ * Real FUN-ISRAEL rental inventory.
+ * Customer-facing pricing only — never display internal procurement cost.
+ * Images use Unsplash placeholders — replace with real product photos in admin.
  */
 export const seedProducts: Product[] = [
   {
-    id: "atlantis-water-park",
-    slug: "atlantis-water-park",
-    name: "אטלנטיס - פארק מים ענק",
-    shortDescription: "פארק המים הגדול ביותר — מגלשות תאומות, בריכה מרכזית וקשתות מים.",
+    id: "purple-octopus-water-park",
+    slug: "purple-octopus-water-park",
+    name: "פארק מים התמנון הסגול",
+    shortDescription:
+      "מתנפח מים גדול וצבעוני: 2 מגלשות, שכשוכית, קיר טיפוס ומזרקות מים.",
     longDescription:
-      "מתנפח הדגל של FUN-ISRAEL. אטלנטיס משלב 3 מגלשות מים, בריכה רחבה במיוחד וקשתות מים — חוויית פארק מים מקצועית בחצר שלכם. בנוי מבד PVC כפול בעובי 0.55 מ\"מ, תפרים מחוזקים ותפים ניקיון מקיף בין השכרות. אידיאלי לאירועי קיץ, ימי הולדת ומפגשי משפחה גדולים.",
+      "פארק מים שלם בגינה שלכם. מתנפח גדול ומרשים בעיצוב התמנון הסגול, כולל שתי מגלשות מים, שכשוכית רחבה, קיר טיפוס, מזרקות מים וצנרת ייעודית. מתאים במיוחד לימי הולדת בקיץ ולאירועי משפחה גדולים. מסופק עם מפוח עוצמתי, ערכת תיקון, יתדות עיגון ותיק נשיאה.",
     category: "water",
-    secondaryCategories: ["birthday"],
-    price: 850,
-    compareAtPrice: 1100,
+    secondaryCategories: ["birthday", "premium"],
+    price: 350,
     images: [
       "https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=1600&q=80",
       "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1600&q=80",
       "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600&q=80"
     ],
-    ageRange: "3-14",
-    dimensions: { length: 580, width: 480, height: 280 },
-    setupArea: { length: 7, width: 6 },
+    ageRange: "3-12",
+    dimensions: { length: 454, width: 431, height: 290 },
+    setupArea: { length: 6, width: 5.5 },
     indoorFriendly: false,
     outdoorFriendly: true,
     needsWater: true,
-    setupTime: 35,
+    setupTime: 25,
     pickupVehicle: "טנדר",
-    stock: 2,
+    stock: 1,
     badges: ["popular", "summer", "instagram"],
-    perfectFor: ["ימי הולדת בקיץ", "אירועי משפחה", "פעילויות גן"],
+    perfectFor: [
+      "ימי הולדת קיץ",
+      "אירועי משפחה בגינה",
+      "ילדים שאוהבים מים"
+    ],
     active: true
   },
   {
-    id: "white-dream-castle",
-    slug: "white-dream-castle",
-    name: "ארמון החלומות הלבן",
-    shortDescription: "מתנפח לבן מעוצב, פרימיום, מושלם לצילומי אינסטגרם.",
+    id: "sports-arena-inflatable",
+    slug: "sports-arena-inflatable",
+    name: "מגרש ספורט מתנפח",
+    shortDescription:
+      "מגרש מתנפח גדול לכדורגל, כדורסל וכדורעף — אנרגיה ותחרות לילדים.",
     longDescription:
-      "ארמון החלומות הוא המתנפח החדש שלנו בקטגוריית הפרימיום. גוונים ניטרליים, צורת ארמון אלגנטית וגימור איכותי שהופכים אותו ללהיט באירועי בנות, מסיבות פרידה והפקות צילום. מתאים לאינדור עם תקרות גבוהות ולאאוטדור.",
-    category: "premium",
-    secondaryCategories: ["birthday", "indoor"],
-    price: 750,
+      "מתקן ספורט מתנפח גדול במיוחד שמתאים למשחקי כדורגל, כדורסל וכדורעף. אידיאלי לאירועים אנרגטיים ולימי הולדת של בנים ובנות גילאי 6-12. מאפשר משחק קבוצתי תחרותי במרחב בטוח ותחום, ומשתלב יפה בחבילות שכוללות מתקני מים או פעילות.",
+    category: "sports",
+    secondaryCategories: ["birthday"],
+    price: 400,
     images: [
-      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80",
-      "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1600&q=80",
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&q=80"
+      "https://images.unsplash.com/photo-1521412644187-c49fa049e84d?w=1600&q=80",
+      "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=1600&q=80",
+      "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=1600&q=80"
     ],
-    ageRange: "2-12",
-    dimensions: { length: 420, width: 380, height: 320 },
-    setupArea: { length: 5.5, width: 5 },
-    indoorFriendly: true,
+    ageRange: "6-12",
+    dimensions: { length: 800, width: 335, height: 180 },
+    setupArea: { length: 9, width: 4.5 },
+    indoorFriendly: false,
     outdoorFriendly: true,
     needsWater: false,
     setupTime: 25,
     pickupVehicle: "טנדר",
     stock: 1,
-    badges: ["premium", "instagram", "new"],
-    perfectFor: ["אירועי בנות", "ימי הולדת מעוצבים", "צילומי הפקה"],
+    badges: ["popular", "new"],
+    perfectFor: [
+      "ימי הולדת אנרגטיים",
+      "אירועי ספורט קבוצתיים",
+      "ילדים שאוהבים תחרות"
+    ],
     active: true
   },
   {
-    id: "ice-cream-combo",
-    slug: "ice-cream-combo",
-    name: "קומבו גלידה",
-    shortDescription: "מתנפח קומבו בעיצוב גלידה — מגלשה, בריכת כדורים ואזור קפיצה.",
+    id: "bouncy-house",
+    slug: "bouncy-house",
+    name: "הבית הקופצני",
+    shortDescription:
+      "מתנפח קלאסי וצבעוני לגילאים צעירים — מושלם לחצרות וימי הולדת קטנים.",
     longDescription:
-      "מתנפח קומבו מתוק במיוחד בעיצוב גלידה צבעוני. כולל אזור קפיצה רחב, מגלשה רכה ובריכת כדורים מובנית. בחירה מצוינת לאירועי גילאי 3-10.",
+      "מתנפח קפיצה קלאסי בעיצוב צבעוני ושמח. גודלו הקומפקטי מתאים מצוין לגינות, חצרות ואירועים משפחתיים קטנים, והוא הבחירה המנצחת לילדים צעירים יותר. נקי, בטוח ומוכן לשעות של כיף.",
     category: "birthday",
-    secondaryCategories: ["indoor"],
-    price: 650,
+    secondaryCategories: ["indoor", "toddler"],
+    price: 300,
     images: [
+      "https://images.unsplash.com/photo-1530878869293-44c79c5f04a8?w=1600&q=80",
       "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1600&q=80",
-      "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1600&q=80",
       "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=1600&q=80"
     ],
-    ageRange: "3-10",
-    dimensions: { length: 450, width: 380, height: 280 },
-    setupArea: { length: 5.5, width: 5 },
-    indoorFriendly: true,
-    outdoorFriendly: true,
-    needsWater: false,
-    setupTime: 25,
-    pickupVehicle: "טנדר",
-    stock: 2,
-    badges: ["popular", "indoor-friendly"],
-    perfectFor: ["ימי הולדת מתוקים", "אירועי גן", "מסיבות חורף"],
-    active: true
-  },
-  {
-    id: "gorilla-combo-slide",
-    slug: "gorilla-combo-slide",
-    name: "קומבו גורילה",
-    shortDescription: "מגלשה דו-מסלולית עם בריכת מים — אדרנלין לקיץ.",
-    longDescription:
-      "קומבו גורילה הוא המתנפח האקסטרים שלנו לגיל בית ספר. מגלשה דו-מסלולית עם בריכת מים גדולה בתחתית, אזור טיפוס וקירות בולמי הולם. חוויה מקצועית של פארק מים בחצר.",
-    category: "water",
-    secondaryCategories: ["birthday"],
-    price: 720,
-    images: [
-      "https://images.unsplash.com/photo-1571999292598-9a8e95a2c9cf?w=1600&q=80",
-      "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=1600&q=80",
-      "https://images.unsplash.com/photo-1530878869293-44c79c5f04a8?w=1600&q=80"
-    ],
-    ageRange: "5-14",
-    dimensions: { length: 520, width: 380, height: 290 },
-    setupArea: { length: 6, width: 5 },
-    indoorFriendly: false,
-    outdoorFriendly: true,
-    needsWater: true,
-    setupTime: 30,
-    pickupVehicle: "טנדר",
-    stock: 1,
-    badges: ["summer", "popular"],
-    perfectFor: ["ימי הולדת בקיץ", "ילדי בית ספר", "אירועי שכונה"],
-    active: true
-  },
-  {
-    id: "toddler-clouds",
-    slug: "toddler-clouds",
-    name: "ענני פעוטות",
-    shortDescription: "מתנפח רך ונמוך, בטוח במיוחד לגילאי 1-5.",
-    longDescription:
-      "מתנפח ייחודי שעוצב מחדש לפעוטות. גובה נמוך, רכיבים רכים, ללא מגלשה תלולה — מאפשר חוויה בטוחה לגילאים הצעירים. מוצר חובה בגן ובאירועי שנה ראשונה.",
-    category: "toddler",
-    secondaryCategories: ["indoor", "premium"],
-    price: 480,
-    images: [
-      "https://images.unsplash.com/photo-1545048702-79362596cdc9?w=1600&q=80",
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1600&q=80",
-      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=1600&q=80"
-    ],
-    ageRange: "1-5",
-    dimensions: { length: 350, width: 300, height: 180 },
-    setupArea: { length: 4.5, width: 4 },
+    ageRange: "2-8",
+    dimensions: { length: 280, width: 250, height: 220 },
+    setupArea: { length: 3.5, width: 3.2 },
     indoorFriendly: true,
     outdoorFriendly: true,
     needsWater: false,
     setupTime: 15,
     pickupVehicle: "רכב משפחתי גדול",
-    stock: 2,
-    badges: ["perfect-for-toddlers", "indoor-friendly", "premium"],
-    perfectFor: ["יום הולדת שנה", "גני ילדים", "אירועי פעוטות"],
+    stock: 1,
+    badges: ["popular", "indoor-friendly"],
+    perfectFor: [
+      "ימי הולדת קטנים",
+      "אירועים משפחתיים",
+      "ילדים גילאי גן"
+    ],
     active: true
   },
   {
-    id: "soft-play-package-deluxe",
-    slug: "soft-play-package-deluxe",
-    name: "סופט-פליי חבילה דלוקס",
-    shortDescription: "סט רכיבי משחק רכים — מדרגות, גשרים, גלילים וקוביות.",
+    id: "activity-slide-bouncer",
+    slug: "activity-slide-bouncer",
+    name: "מתנפח פעילות עם מגלשה",
+    shortDescription:
+      "מתנפח משולב: קיר טיפוס, בריכת כדורים, מגלשה, אזור קפיצה וחישוק כדורסל.",
     longDescription:
-      "חבילת סופט-פליי מקצועית הכוללת מעל 15 רכיבים בגוונים פסטליים. אידיאלית לאירועי פעוטות, ימי הולדת שנה ופעילויות בוטיק. כולל גם שטיח רך מתחת לכל הסט.",
-    category: "soft-play",
-    secondaryCategories: ["toddler", "premium"],
-    price: 550,
+      "מתנפח פעילות מגוון שמעלה כל אירוע לרמה הבאה. כולל קיר טיפוס, בריכת כדורים, מגלשה, אזור קפיצה, חישוק כדורסל וקונוסים. מתאים לימי הולדת ביתיים, אירועים משפחתיים וילדים שאוהבים גיוון של פעילויות במתנפח אחד.",
+    category: "activity",
+    secondaryCategories: ["birthday"],
+    price: 300,
     images: [
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1600&q=80",
-      "https://images.unsplash.com/photo-1558877385-8c1b8fc55e4d?w=1600&q=80",
-      "https://images.unsplash.com/photo-1607582544224-7eea60d9c4d3?w=1600&q=80"
+      "https://images.unsplash.com/photo-1571999292598-9a8e95a2c9cf?w=1600&q=80",
+      "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1600&q=80",
+      "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1600&q=80"
     ],
-    ageRange: "1-4",
-    dimensions: { length: 400, width: 400, height: 80 },
-    setupArea: { length: 5, width: 5 },
-    indoorFriendly: true,
-    outdoorFriendly: false,
+    ageRange: "3-10",
+    dimensions: { length: 400, width: 353, height: 196 },
+    setupArea: { length: 5, width: 4.5 },
+    indoorFriendly: false,
+    outdoorFriendly: true,
     needsWater: false,
     setupTime: 20,
-    pickupVehicle: "רכב משפחתי גדול",
-    stock: 2,
-    badges: ["premium", "perfect-for-toddlers", "indoor-friendly"],
-    perfectFor: ["מסיבת שנה", "אירועי בוטיק", "צילומי תינוקות"],
+    pickupVehicle: "טנדר",
+    stock: 1,
+    badges: ["popular"],
+    perfectFor: [
+      "ימי הולדת ביתיים",
+      "ילדים שאוהבים גיוון",
+      "אירועי גן"
+    ],
     active: true
   },
   {
-    id: "ball-pit-premium",
-    slug: "ball-pit-premium",
-    name: "בריכת כדורים פרימיום",
-    shortDescription: "בריכה גדולה עם 1,500 כדורים בגוונים פסטליים.",
+    id: "double-water-slide",
+    slug: "double-water-slide",
+    name: "מגלשת מים כפולה",
+    shortDescription:
+      "מתנפח מים עם שכשוכית, 2 מגלשות, אזור קפיצה ושני תותחי מים.",
     longDescription:
-      "בריכת כדורים בגוונים ניטרליים שמעלה כל מתנפח לרמה הבאה. דפנות רכות, רצפה מרופדת ו-1,500 כדורים נקיים שעוברים סטריליזציה בין השכרות. ניתן להזמין גם כתוספת למתנפחים אחרים.",
-    category: "ball-pit",
-    secondaryCategories: ["toddler", "indoor", "premium"],
-    price: 320,
+      "מתנפח מים שמשלב שכשוכית רחבה, שתי מגלשות מים, אזור קפיצה ושני תותחי מים. מתאים מצוין לאירועי קיץ, ימי הולדת בגינה וכל אירוע שבו רוצים פעילות מים מרשימה לכל גיל.",
+    category: "water",
+    secondaryCategories: ["birthday"],
+    price: 350,
+    images: [
+      "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1600&q=80",
+      "https://images.unsplash.com/photo-1530878869293-44c79c5f04a8?w=1600&q=80",
+      "https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=1600&q=80"
+    ],
+    ageRange: "3-12",
+    dimensions: { length: 439, width: 300, height: 198 },
+    setupArea: { length: 5.5, width: 4.5 },
+    indoorFriendly: false,
+    outdoorFriendly: true,
+    needsWater: true,
+    setupTime: 20,
+    pickupVehicle: "טנדר",
+    stock: 1,
+    badges: ["popular", "summer"],
+    perfectFor: [
+      "ימי הולדת מים",
+      "אירועי קיץ בגינה",
+      "ילדים שאוהבים מגלשות"
+    ],
+    active: true
+  },
+  {
+    id: "twin-lane-water-slide",
+    slug: "twin-lane-water-slide",
+    name: "מגלשת מים דו-מסלולית",
+    shortDescription:
+      "מגלשת מים דו-מסלולית — יותר זרימה, פחות תורים, יותר פעילות.",
+    longDescription:
+      "מתנפח מים דו-מסלולי שמאפשר שני ילדים להחליק במקביל — מתאים במיוחד לאירועים גדולים שרוצים פחות תורים ויותר פעילות. משתלב יפה בחבילות מים כפולות לימי הולדת קיץ.",
+    category: "water",
+    secondaryCategories: ["birthday"],
+    price: 400,
+    images: [
+      "https://images.unsplash.com/photo-1571999292598-9a8e95a2c9cf?w=1600&q=80",
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600&q=80",
+      "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1600&q=80"
+    ],
+    ageRange: "4-14",
+    dimensions: { length: 500, width: 320, height: 220 },
+    setupArea: { length: 6, width: 4.5 },
+    indoorFriendly: false,
+    outdoorFriendly: true,
+    needsWater: true,
+    setupTime: 25,
+    pickupVehicle: "טנדר",
+    stock: 1,
+    badges: ["summer", "premium"],
+    perfectFor: [
+      "חבילות מים גדולות",
+      "ימי הולדת קיץ",
+      "אירועים עם הרבה ילדים"
+    ],
+    active: true
+  },
+  {
+    id: "seven-stations-house",
+    slug: "seven-stations-house",
+    name: "בית 7 התחנות",
+    shortDescription:
+      "מתנפח פעילות עם 7 תחנות משחק — גיוון מקסימלי, תנועה רציפה.",
+    longDescription:
+      "מתנפח פעילות מגוון במיוחד עם שבע תחנות משחק שונות בתוך מתקן אחד. שומר על הילדים בתנועה ובעניין במשך שעות, מתאים לחצרות, גינות, ימי הולדת ואירועים משפחתיים שבהם רוצים יותר מסתם מתנפח קפיצה.",
+    category: "activity",
+    secondaryCategories: ["birthday", "indoor"],
+    price: 350,
     images: [
       "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=1600&q=80",
-      "https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?w=1600&q=80",
-      "https://images.unsplash.com/photo-1596463059283-da257325bab8?w=1600&q=80"
+      "https://images.unsplash.com/photo-1571999292598-9a8e95a2c9cf?w=1600&q=80",
+      "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=1600&q=80"
     ],
-    ageRange: "1-8",
-    dimensions: { length: 250, width: 250, height: 60 },
-    setupArea: { length: 3, width: 3 },
+    ageRange: "3-12",
+    dimensions: { length: 420, width: 360, height: 220 },
+    setupArea: { length: 5, width: 4.5 },
     indoorFriendly: true,
     outdoorFriendly: true,
     needsWater: false,
-    setupTime: 10,
-    pickupVehicle: "רכב פרטי",
-    stock: 3,
-    badges: ["premium", "instagram", "indoor-friendly"],
-    perfectFor: ["תוספת לכל מתנפח", "מסיבות פעוטות", "צילומי אירוע"],
+    setupTime: 25,
+    pickupVehicle: "טנדר",
+    stock: 1,
+    badges: ["popular", "new"],
+    perfectFor: [
+      "ימי הולדת מורכבים",
+      "אירועים משפחתיים",
+      "ילדים שאוהבים מגוון"
+    ],
     active: true
   },
   {
-    id: "indoor-mini-bouncer",
-    slug: "indoor-mini-bouncer",
-    name: "מיני קפיץ אינדור",
-    shortDescription: "מתנפח קומפקטי לסלון או חדר משחקים.",
+    id: "mega-water-double-slide",
+    slug: "mega-water-double-slide",
+    name: "מתנפח מים ענק עם 2 מגלשות",
+    shortDescription:
+      "מתנפח מים גדול ומרשים עם שתי מגלשות — אפקט WOW לאירועי הקיץ.",
     longDescription:
-      "המתנפח הקומפקטי שלנו, מתאים לחדרים עם תקרה סטנדרטית (2.4 מ׳). אזור קפיצה איכותי במידות שמתאימות לדירה ממוצעת. החלום של החורף הישראלי.",
-    category: "indoor",
-    secondaryCategories: ["toddler"],
-    price: 380,
+      "המתנפח הגדול והמרשים ביותר באוסף המים שלנו — שתי מגלשות, נראות חזקה ואפקט WOW מובטח לאירועים גדולים. מתאים במיוחד לחבילות פרימיום, לאירועי קיץ ולימי הולדת שאתם רוצים שהילדים יזכרו.",
+    category: "water",
+    secondaryCategories: ["premium", "birthday"],
+    price: 400,
     images: [
-      "https://images.unsplash.com/photo-1602536052359-ef94c21c5948?w=1600&q=80",
-      "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1600&q=80",
-      "https://images.unsplash.com/photo-1601758174357-95e87f0e8e91?w=1600&q=80"
+      "https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=1600&q=80",
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1600&q=80",
+      "https://images.unsplash.com/photo-1571999292598-9a8e95a2c9cf?w=1600&q=80"
     ],
-    ageRange: "2-8",
-    dimensions: { length: 280, width: 250, height: 220 },
-    setupArea: { length: 3.5, width: 3 },
-    indoorFriendly: true,
+    ageRange: "4-14",
+    dimensions: { length: 475, width: 335, height: 205 },
+    setupArea: { length: 6, width: 4.5 },
+    indoorFriendly: false,
     outdoorFriendly: true,
-    needsWater: false,
-    setupTime: 12,
-    pickupVehicle: "רכב משפחתי גדול",
-    stock: 2,
-    badges: ["indoor-friendly", "popular"],
-    perfectFor: ["מסיבות חורף", "סלון/חדר משחקים", "אירועים קטנים"],
+    needsWater: true,
+    setupTime: 25,
+    pickupVehicle: "טנדר",
+    stock: 1,
+    badges: ["premium", "summer", "instagram"],
+    perfectFor: [
+      "אירועי קיץ פרימיום",
+      "ימי הולדת גדולים",
+      "חבילות Mega Party"
+    ],
     active: true
   }
 ];

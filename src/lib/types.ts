@@ -5,7 +5,10 @@ export type ProductCategory =
   | "toddler"
   | "premium"
   | "soft-play"
-  | "ball-pit";
+  | "ball-pit"
+  | "sports"
+  | "activity"
+  | "event-extra";
 
 export type ProductBadge =
   | "popular"

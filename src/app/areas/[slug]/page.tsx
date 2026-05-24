@@ -230,15 +230,13 @@ function humanizeSlug(slug: string) {
 
 function humanizePackageSlug(slug: string) {
   const titles: Record<string, string> = {
-    "self-pickup": "חבילת איסוף עצמי",
-    "birthday-basic": "חבילת יום הולדת בסיסית",
-    premium: "חבילת פרימיום",
-    "summer-water": "חבילת מים לקיץ",
-    toddler: "חבילת פעוטות",
-    "luxury-white": "חבילת לבן יוקרתית",
-    "indoor-winter": "חבילת Indoor",
-    "family-combo": "Combo משפחתי",
-    "extra-fun": "אקסטרה Fun"
+    "mini-party": "חבילת Mini Party",
+    "water-splash": "חבילת Water Splash",
+    "double-splash": "חבילת Double Splash",
+    "sports-arena": "חבילת Sports Arena",
+    "mega-party": "חבילת Mega Party",
+    "instagram-wow": "חבילת Instagram WOW",
+    festival: "חבילת Festival"
   };
   return titles[slug] ?? slug;
 }

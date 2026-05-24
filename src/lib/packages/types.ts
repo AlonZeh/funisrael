@@ -11,6 +11,8 @@ export type PackageCategoryId =
   | "indoor"
   | "combo"
   | "extra"
+  | "sports"
+  | "festival"
   | "custom";
 
 export type PackageTagId =

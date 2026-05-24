@@ -53,11 +53,11 @@ export const areaContent: Record<string, AreaContent> = {
       }
     ],
     recommendedPackages: [
-      "birthday-basic",
-      "premium",
-      "summer-water",
-      "toddler",
-      "family-combo"
+      "mini-party",
+      "water-splash",
+      "double-splash",
+      "mega-party",
+      "sports-arena"
     ],
     relatedArticles: [
       "hashkarat-mitnapchim-rehovot-birthday-guide",
