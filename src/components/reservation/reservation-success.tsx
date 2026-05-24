@@ -36,6 +36,13 @@ export function ReservationSuccess({ whatsappHref, onStartOver }: Props) {
           שלחו אותה — וצוות FUN-ISRAEL יראה אותה מיד.
         </div>
 
+        <div className="rounded-2xl bg-mint-50 ring-1 ring-mint-100 p-4 text-sm text-ink-700 leading-relaxed text-start">
+          <strong className="text-ink-800">לתשומת לבכם:</strong> האתר אינו מבצע
+          סליקה ולא שומר פרטי אשראי. הבקשה ששלחתם היא שיריון בלבד — אישור
+          סופי, תיאום ותשלום ייעשו מול הצוות בוואטסאפ או בטלפון לאחר בדיקת
+          זמינות.
+        </div>
+
         <div className="flex flex-col sm:flex-row justify-center gap-3">
           <a
             href={whatsappHref}

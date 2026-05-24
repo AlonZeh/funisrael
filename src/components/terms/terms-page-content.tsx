@@ -5,19 +5,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   AlertTriangle,
-  Briefcase,
-  CalendarX,
-  CheckCircle2,
   ChevronDown,
-  Clock,
-  CreditCard,
   Droplet,
-  FileText,
+  Eye,
+  Gavel,
+  Home,
   MessageCircle,
   PackageCheck,
   Phone,
-  ShieldCheck,
-  Sparkles,
+  Scroll,
   Truck,
   Users,
   Zap
@@ -40,59 +36,53 @@ const COMMUNITY_SECONDARY =
 
 const summaryCards = [
   {
-    icon: ShieldCheck,
-    title: "אחריות השוכר",
-    description: "השמירה על הציוד, השימוש לפי ההוראות והחזרה תקינה — באחריות השוכר.",
-    anchor: "responsibility"
+    icon: Home,
+    title: "פרטי-ביתי בלבד",
+    description: 'הציוד מסווג ת"י 562 ומיועד לחצרות פרטיות בלבד. אסור בפארקים, גני ילדים, מתנ"סים ואירועים מסחריים.',
+    anchor: "scope-private"
   },
   {
-    icon: AlertTriangle,
-    title: "בטיחות והשגחה",
-    description: "מבוגר אחראי בכל זמן השימוש, ללא נעליים/אוכל, ופינוי מיידי במזג אוויר קיצוני.",
-    anchor: "safety"
+    icon: Eye,
+    title: "השגחה רציפה 100%",
+    description: "השוכר הוא המשגיח האחראי. מבוגר מעל גיל 18 חייב להיות צמוד למתקן לאורך כל הפעלתו.",
+    anchor: "safety-declaration"
   },
   {
-    icon: CreditCard,
-    title: "תשלום ואישור הזמנה",
-    description: "מזומן או העברה בנקאית. ההזמנה מאושרת לאחר השלמת תנאי התשלום.",
-    anchor: "payment"
-  },
-  {
-    icon: Truck,
-    title: "איסוף עצמי והחזרה",
-    description: "איסוף בתיאום מראש מהמחסן בראשון לציון, ברכב מתאים לציוד.",
-    anchor: "self-pickup"
+    icon: Zap,
+    title: "הקמה וחשמל",
+    description: "צ׳ק-ליסט חובה: עיגון יתדות, מרווח 1.5 מ׳ סביב, מפוח מבודד מילדים, ממסר פחת (RCD).",
+    anchor: "setup-electricity"
   },
   {
     icon: Droplet,
-    title: "מתנפחים רטובים ולבנים",
-    description: "מתנפחי מים דורשים ניקוז; מתנפח לבן דורש שימוש זהיר ונקי במיוחד.",
-    anchor: "wet-inflatables"
+    title: "מתנפחי מים",
+    description: 'הפרדה מלאה של חשמל ממים, גובה בריכה עד 30 ס"מ, ייבוש 30 דק׳ לפני קיפול.',
+    anchor: "water-inflatables"
   },
   {
-    icon: CalendarX,
-    title: "ביטולים ושימוש מסחרי",
-    description: "ביטול ללא חיוב לפי מדיניותנו; שימוש מסחרי דורש אישור מראש בכתב.",
-    anchor: "commercial"
+    icon: AlertTriangle,
+    title: "נהלי חירום",
+    description: 'פינוי מיידי בצניחת המתקן. איסור הפעלה ברוח מעל 38 קמ"ש או בגשם/סערה.',
+    anchor: "emergency"
+  },
+  {
+    icon: Truck,
+    title: "מסירה והחזרה",
+    description: 'בדיקה עם הקבלה (דיווח מיידי על קרע), החזרה בזמן, ניקיון. ניקוי מיוחד החל מ-150 ש"ח.',
+    anchor: "delivery-returns"
   }
 ];
 
 /** Lucide icon mapped per section id for visual context */
 const sectionIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  responsibility: ShieldCheck,
-  "rental-period": Clock,
-  payment: CreditCard,
-  usage: Users,
-  cancellation: CalendarX,
-  commercial: Briefcase,
-  safety: AlertTriangle,
-  generator: Zap,
-  "self-pickup": Truck,
-  "wet-inflatables": Droplet,
-  "white-inflatable": Sparkles,
-  "order-confirmation": CheckCircle2,
-  "renter-declaration": FileText,
-  contact: Phone
+  "scope-private": Home,
+  "safety-declaration": Eye,
+  "setup-electricity": Zap,
+  "water-inflatables": Droplet,
+  "emergency": AlertTriangle,
+  "conduct": Users,
+  "delivery-returns": Truck,
+  "jurisdiction": Gavel
 };
 
 export function TermsPageContent() {
@@ -278,7 +268,7 @@ function TermsAccordion({ sections }: { sections: TermsSection[] }) {
       </div>
       <div className="grid gap-3">
         {sections.map((section) => {
-          const Icon = sectionIcons[section.id] ?? FileText;
+          const Icon = sectionIcons[section.id] ?? Scroll;
           const isOpen = openId === section.id;
           return (
             <div

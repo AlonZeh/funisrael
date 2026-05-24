@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import { useReservationStore } from "@/store/reservation-store";
+import { TermsScrollBox } from "@/components/terms/terms-scroll-box";
 
 const TIME_OPTIONS = [
   "10:00",
@@ -133,42 +134,66 @@ export function ContactDetailsStep({ errors }: { errors?: ContactErrors }) {
           <span>אפשר ליצור איתי קשר בוואטסאפ לגבי זמינות ואישור הזמנה.</span>
         </label>
 
-        <div className="border-t border-ink-100 pt-4 mt-1 space-y-3">
+        <div className="border-t border-ink-100 pt-4 mt-1 space-y-4">
           <p className="text-xs font-bold uppercase tracking-widest text-ink-400">
             אישורים לפני שליחה
           </p>
 
-          <label className="flex items-start gap-2 text-sm text-ink-700">
+          {/* Full Terms of Service — scrollable box right above the mandatory checkbox */}
+          <TermsScrollBox />
+
+          {/* Mandatory ToS acceptance — exact wording per business requirement */}
+          <label
+            className={`flex items-start gap-2 text-sm rounded-2xl p-3 ring-1 transition ${
+              errors?.termsAccepted
+                ? "ring-brand-300 bg-brand-50 text-ink-800"
+                : "ring-ink-100 bg-cream-50 text-ink-700"
+            }`}
+          >
             <input
               type="checkbox"
               checked={customer.termsAccepted}
               onChange={(e) => setCustomer({ termsAccepted: e.target.checked })}
-              className="h-4 w-4 mt-1 accent-brand-500"
+              className="h-5 w-5 mt-0.5 accent-brand-500 shrink-0"
+              aria-required="true"
+              aria-invalid={!!errors?.termsAccepted}
             />
-            <span>
-              קראתי ואישרתי את{" "}
+            <span className="leading-relaxed">
+              קראתי, הבנתי ואני מסכים למלוא תנאי{" "}
               <Link
                 href="/terms"
                 target="_blank"
                 className="text-brand-600 font-semibold underline underline-offset-2 hover:text-brand-700"
               >
-                תקנון ותנאי השכרת הציוד
-              </Link>{" "}
-              ואת{" "}
-              <Link
-                href="/privacy"
-                target="_blank"
-                className="text-brand-600 font-semibold underline underline-offset-2 hover:text-brand-700"
-              >
-                מדיניות הפרטיות
+                תקנון FUN-ISRAEL
               </Link>
-              .<span className="text-brand-500 ms-1">*</span>
+              , כולל נספח הבטיחות, נהלי החירום והצהרת המשגיח האחראי, ואני
+              מתחייב להפעיל את הציוד בחצר פרטית בלבד.
+              <span className="text-brand-500 ms-1">*</span>
             </span>
           </label>
           {errors?.termsAccepted && (
-            <p className="text-sm text-brand-600">{errors.termsAccepted}</p>
+            <p className="text-sm text-brand-600 -mt-2">
+              {errors.termsAccepted}
+            </p>
           )}
 
+          {/* Privacy acknowledgment — small line, not a separate checkbox, since
+              ToS acceptance is the legal anchor and the user explicitly wants
+              one mandatory checkbox. */}
+          <p className="text-xs text-ink-500 leading-relaxed">
+            הפרטים שתמסור נשמרים בהתאם ל-
+            <Link
+              href="/privacy"
+              target="_blank"
+              className="text-brand-600 font-semibold underline underline-offset-2 hover:text-brand-700"
+            >
+              מדיניות הפרטיות
+            </Link>{" "}
+            של FUN-ISRAEL. האתר אינו מבצע סליקה ולא שומר פרטי אשראי.
+          </p>
+
+          {/* Marketing opt-in — optional, separate, never bundled */}
           <label className="flex items-start gap-2 text-sm text-ink-700">
             <input
               type="checkbox"

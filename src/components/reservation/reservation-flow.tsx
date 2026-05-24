@@ -149,7 +149,7 @@ export function ReservationFlow() {
           errs.address = "יש להזין כתובת או אזור להובלה.";
         if (!customer.termsAccepted)
           errs.termsAccepted =
-            "יש לאשר את התקנון ואת מדיניות הפרטיות לפני שליחת הבקשה.";
+            "יש לקרוא את תקנון FUN-ISRAEL ולסמן את תיבת האישור לפני שליחת הבקשה.";
         if (Object.keys(errs).length) {
           setContactErrors(errs);
           return false;
@@ -269,7 +269,9 @@ export function ReservationFlow() {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="btn-brand"
+                disabled={!customer.termsAccepted}
+                className="btn-brand disabled:opacity-50 disabled:cursor-not-allowed"
+                title={!customer.termsAccepted ? "יש לסמן את אישור התקנון לפני שליחה" : undefined}
               >
                 <Send className="h-4 w-4" />
                 שליחת בקשת שיריון
@@ -289,6 +291,9 @@ export function ReservationFlow() {
       <MobileStickyAction
         primaryLabel={stepIdx === STEPS.length - 1 ? "שליחת בקשת שיריון" : "המשך"}
         onPrimary={stepIdx === STEPS.length - 1 ? handleSubmit : handleNext}
+        primaryDisabled={
+          stepIdx === STEPS.length - 1 && !customer.termsAccepted
+        }
         canGoBack={stepIdx > 0}
         onBack={handleBack}
       />
@@ -299,11 +304,13 @@ export function ReservationFlow() {
 function MobileStickyAction({
   primaryLabel,
   onPrimary,
+  primaryDisabled,
   canGoBack,
   onBack
 }: {
   primaryLabel: string;
   onPrimary: () => void;
+  primaryDisabled?: boolean;
   canGoBack: boolean;
   onBack: () => void;
 }) {
@@ -319,7 +326,12 @@ function MobileStickyAction({
         >
           <ArrowRight className="h-4 w-4" />
         </button>
-        <button type="button" onClick={onPrimary} className="btn-brand w-full">
+        <button
+          type="button"
+          onClick={onPrimary}
+          disabled={primaryDisabled}
+          className="btn-brand w-full disabled:opacity-50 disabled:cursor-not-allowed"
+        >
           {primaryLabel}
           <ArrowLeft className="h-4 w-4" />
         </button>
